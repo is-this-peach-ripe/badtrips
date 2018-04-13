@@ -1,4 +1,4 @@
-from flask import Flask, session, request
+from flask import Flask, session, request, jsonify
 import redis
 import yelp_stuff
 app = Flask(__name__)
@@ -39,9 +39,13 @@ def newQuestion():
     '''
     game = getGame(session['id'])
     question, answer = yelp_stuff.createNewQuestion(game['location'])
+    question = {
+        "A": {"nome": "Café do barbosa", "tipo": "cafe", "img_url":"http://oje-50ea.kxcdn.com/wp-content/uploads/2017/03/cafe-925x578.jpg"},
+        "B": {"nome": "Café do Zé", "tipo": "cafe", "img_url":"http://oje-50ea.kxcdn.com/wp-content/uploads/2017/03/cafe-925x578.jpg"}
+    }
+    answer = "Café do Zé"
     store_answer(answer, game)
-    #return question
-    pass
+    return jsonify(question)
 
 @app.route('/answer', methods=['POST'])
 def answer():
