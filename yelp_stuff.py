@@ -1,0 +1,4 @@
+
+
+def createNewQuestion(location):
+    pass
