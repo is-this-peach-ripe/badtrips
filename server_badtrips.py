@@ -1,8 +1,18 @@
-from flask import Flask, session, request, jsonify
+from flask import Flask, session, request, jsonify, send_from_directory
+import os
+import json
 import redis
 import yelp_stuff
-app = Flask(__name__)
-app.secret_key = ''
+
+r = redis.Redis(host='localhost', port=6379, password='')
+app = Flask("badtrips", static_url_path='')
+app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RZ'
+static_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'static')
+
+
+@app.route('/static/<path:path>')
+def send_js(path):
+    return send_from_directory(static_dir, path)
 
 @app.route('/')
 def index():
@@ -11,7 +21,7 @@ def index():
     user chooses the location of the game
     :return:
     '''
-    pass
+    return send_from_directory(static_dir, 'index.html')
 
 @app.route('/play', methods=['POST'])
 def play():
@@ -21,13 +31,12 @@ def play():
 
     :return:
     '''
-    id = newGame(request.form['location'])
+    id = newGame(request.form['location'], request.form['username'])
+    print(id)
     session['id'] = id
+    return send_from_directory(static_dir, 'play.html')
 
-    # return play page and call /newquestion
-    pass
-
-@app.route('/newquestion', methos=['POST'])
+@app.route('/newquestion', methods=['POST'])
 def newQuestion():
     '''
     Create a new question from yelp
@@ -38,13 +47,10 @@ def newQuestion():
     :return:
     '''
     game = getGame(session['id'])
+    print(session['id'])
+    print(game)
     question, answer = yelp_stuff.createNewQuestion(game['location'])
-    question = {
-        "A": {"nome": "Café do barbosa", "tipo": "cafe", "img_url":"http://oje-50ea.kxcdn.com/wp-content/uploads/2017/03/cafe-925x578.jpg"},
-        "B": {"nome": "Café do Zé", "tipo": "cafe", "img_url":"http://oje-50ea.kxcdn.com/wp-content/uploads/2017/03/cafe-925x578.jpg"}
-    }
-    answer = "Café do Zé"
-    store_answer(answer, game)
+    store_answer(answer, session['id'], game)
     return jsonify(question)
 
 @app.route('/answer', methods=['POST'])
@@ -60,12 +66,19 @@ def answer():
     #devolve resposta correcta
     pass
 
-def newGame(location):
+def newGame(location, username):
     '''
     create a new game that has a location, username, id and score
     :return: session id
     '''
-    pass
+    id = os.urandom(32)
+    game = {
+        "location": location,
+        "score": 0,
+        "username": username
+    }
+    r.set(id, json.dumps(game))
+    return id
 
 def getGame(id):
     '''
@@ -73,15 +86,21 @@ def getGame(id):
     :param id:
     :return:
     '''
+    game = r.get(id)
+    print("game from redis")
+    print(game)
+    return json.loads(game)
 
-def store_answer(answer, game):
+def store_answer(answer, id, game):
     '''
     store a answer for a game
     :param answer:
     :param game:
+    :param id:
     :return:
     '''
-    pass
+    game["answer"] = answer
+    r.set(id, game)
 
 def check_answer(answer, game):
-    pass
+    return game["answer"] == answer
