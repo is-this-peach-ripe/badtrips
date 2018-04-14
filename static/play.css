@@ -9,6 +9,8 @@ html, body {
 
 .card-img-top{max-height: 50vh; object-fit: cover;}
 
+.card {height:75vh;}
+
 #top_row{margin-bottom: 3vh; margin-left: 15vw; }
 
 #vs {
@@ -18,4 +20,5 @@ html, body {
     align-content: center;
     text-align: center;
     margin-right: auto;
-    font-size: 7vh;}
+    font-size: 7vh;
+}
