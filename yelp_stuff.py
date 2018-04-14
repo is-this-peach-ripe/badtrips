@@ -30,7 +30,7 @@ def getAllInformationAvailable(location):
         # if response.find("404"):
         #     break
         # else:
-        #     print("test")
+        #     print("test")no
         # value=responses
         temp["businesses"]=temp["businesses"]+responses["businesses"]
 
@@ -58,9 +58,9 @@ String location- Ex:"Porto, PT"
 def create_json(location):
     responses = getAllInformationAvailable(location)
     location=location.replace(", ", '')
-    with open(location+'.json', 'w') as fp:
-        json.dump(responses, fp)
-
+    locationDataFile=open(location+'.json', 'w')
+    locationDataFile.write(json.dumps(responses, indent=4, sort_keys=True))
+    locationDataFile.close()
 if __name__ == "__main__":
     #responses =request(URL,API_KEY,DEFAULT_TERM,DEFAULT_LOCATION,0)
     location=DEFAULT_LOCATION
