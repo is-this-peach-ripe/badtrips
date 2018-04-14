@@ -26,14 +26,14 @@ def createNewQuestion(location, difficulty=None):
 	else:
 		rand_ratings = random.sample(set(ratings), 2)
 		question = {
-			"A" : json.loads(df.loc[df['rating'] == rand_ratings[0]].sample(n = 1, axis = 0).to_json(orient='records'))[0],
-			"B" : json.loads(df.loc[df['rating'] == rand_ratings[1]].sample(n = 1, axis = 0).to_json(orient='records'))[0],
+			"A" : json.loads(df.loc[df['rating'] == rand_ratings[0]].drop(['rating'], axis=1).sample(n = 1, axis = 0).to_json(orient='records'))[0],
+			"B" : json.loads(df.loc[df['rating'] == rand_ratings[1]].drop(['rating'], axis=1).sample(n = 1, axis = 0).to_json(orient='records'))[0],
 		}
 		if(rand_ratings.index(min(rand_ratings)) == 0):
 			answer = question['A']['name']
 		else:
 			answer = question['B']['name']
-		#print(answer)
+		print(question)
 		return question, answer
 
 def request(url,api_key,location,offset):
