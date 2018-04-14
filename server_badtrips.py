@@ -93,9 +93,9 @@ def answermulti():
     response, correct_answer = check_answer_multi(answer, user, session['id'], game)
     return jsonify({"correct": response, "answer": correct_answer})
 
-@app.route('/playmulti')
+@app.route('/playmulti', methods=['POST'])
 def multi():
-    id = newMultiGame(request.form['location'], request.form['p1'], request.form['p1'])
+    id = newMultiGame(request.form['location'], request.form['p1'], request.form['p2'])
     session['id'] = id
     app.logger.debug('New multiplayer game created with location: ' + request.form['location'] + ' id: ' + str(id))
     return send_from_directory(static_dir, 'playmulti.html')
