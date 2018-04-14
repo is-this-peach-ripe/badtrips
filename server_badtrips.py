@@ -14,6 +14,7 @@ static_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'static')
 def send_js(path):
     return send_from_directory(static_dir, path)
 
+
 @app.route('/')
 def index():
     '''
@@ -22,6 +23,7 @@ def index():
     :return:
     '''
     return send_from_directory(static_dir, 'index.html')
+
 
 @app.route('/play', methods=['POST'])
 def play():
@@ -35,6 +37,7 @@ def play():
     session['id'] = id
     app.logger.debug('New game created with location: '+ request.form['location'] +' id: ' + str(id))
     return send_from_directory(static_dir, 'play.html')
+
 
 @app.route('/newquestion', methods=['POST'])
 def newQuestion():
@@ -50,9 +53,10 @@ def newQuestion():
     app.logger.debug("New question from "+ str(session['id']) +"\nGame object: "+ str(game) +"\n"  )
     if game['state'] != "playing":
         return jsonify({"state":"no no no no"})
-    question, answer = wrapper_yelp.createNewQuestion(game['location'])
+    question, answer, worst_rev = wrapper_yelp.createNewQuestion(game['location'])
     store_answer(answer, session['id'], game)
     return jsonify(question)
+
 
 @app.route('/answer', methods=['POST'])
 def answer():
@@ -73,6 +77,7 @@ def answer():
         register_gameover(session['id'], game)
         return jsonify({"correct": False, "answer": correct_answer})
 
+
 @app.route('/leaderboard',methods=['POST'])
 def lead():
     l = leaderboard()
@@ -82,6 +87,7 @@ def lead():
         j.append({str(i[0]):i[1]})
     print(j)
     return jsonify(j)
+
 
 @app.route('/answermulti', methods=['POST'])
 def answermulti():
@@ -93,12 +99,14 @@ def answermulti():
     response, correct_answer = check_answer_multi(answer, user, session['id'], game)
     return jsonify({"correct": response, "answer": correct_answer})
 
+
 @app.route('/playmulti', methods=['POST'])
 def multi():
     id = newMultiGame(request.form['location'], request.form['p1'], request.form['p2'])
     session['id'] = id
     app.logger.debug('New multiplayer game created with location: ' + request.form['location'] + ' id: ' + str(id))
     return send_from_directory(static_dir, 'playmulti.html')
+
 
 def newGame(location, username):
     '''
@@ -115,6 +123,7 @@ def newGame(location, username):
     r.set(id, json.dumps(game))
     return id
 
+
 def getGame(id):
     '''
     get a game session from redis
@@ -125,6 +134,7 @@ def getGame(id):
     print("game from redis")
     print(game)
     return json.loads(game.decode('utf-8'))
+
 
 def store_answer(answer, id, game):
     '''
@@ -137,10 +147,12 @@ def store_answer(answer, id, game):
     game["answer"] = answer
     r.set(id, json.dumps(game))
 
+
 def leaderboard():
     l = r.zrevrange("scores", 0, 10, withscores=True)
     print(l)
     return l
+
 
 def register_gameover(id, game):
     '''
@@ -186,6 +198,7 @@ def check_answer(answer, id, game):
         r.set(id, json.dumps(game))
         return True, game["answer"]
     return False, game["answer"]
+
 
 def newMultiGame(location, p1, p2):
     id = os.urandom(32)
