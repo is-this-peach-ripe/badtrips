@@ -11,11 +11,9 @@ function post_answer(u, ans) {
         console.log(data);
         if (data['correct'] === false ){
             if (u === 1){
-                p2_enable = true;
                 p1_enable = false;
             }
             else if(u === 2){
-                p1_enable = true;
                 p2_enable = false;
             }
             if (!p1_enable && !p2_enable){
@@ -47,25 +45,21 @@ function key_handle(e) {
     var code = e.key;
     console.log(e);
     if(code === 'a' && p1_enable){ //a
-        p2_enable = false;
         //p1
         //A
         post_answer(1, $('#A').val());
     }
     else if (code === 's' && p1_enable){ //s
-        p2_enable = false;
         //p1
         //B
         post_answer(1, $('#B').val());
     }
     else if(code === 'k' && p2_enable){ //k
-        p1_enable = false;
         //p2
         //A
         post_answer(2, $('#A').val());
     }
     else if(code === 'l' && p2_enable){ //l
-        p1_enable = false;
         //p2
         //B
         post_answer(2, $('#B').val());
