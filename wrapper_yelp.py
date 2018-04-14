@@ -69,6 +69,3 @@ def getJson():
     locationDataFile = open('test.json', 'w')
     locationDataFile.write(json.dumps(out, indent=4, sort_keys=True))
     locationDataFile.close()
-
-
-createNewQuestion(DEFAULT_LOCATION)
