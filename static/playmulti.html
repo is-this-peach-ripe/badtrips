@@ -12,9 +12,85 @@
     <link rel="stylesheet" type="text/css" href="/static/play.css">
 </head>
 <body>
-<button id="A" style="display: block; margin: auto"></button>
-<button id="B" style="display: block; margin: auto"></button>
-<p id="p1_score"></p>
-<p id="p2_score"></p>
+
+<!--
+<div class="top">
+    <i class="em em-shallow_pan_of_food"></i><i class="em em-cold_sweat"></i>
+    Pick the worst rated place
+    <i class="em em-cold_sweat"></i><i class="em em-shallow_pan_of_food"></i>
+
+</div>
+<div class="scr"><p id="score"></p></div>
+-->
+<div class="container" id="alert">
+  <div class="row" >
+    <div class="col-xs-12 col-sm-12 col-lg-12" id="top_row">
+        <i class="em em-shallow_pan_of_food"></i><i class="em em-cold_sweat"></i>
+        Pick the worst rated place
+        <i class="em em-cold_sweat"></i><i class="em em-shallow_pan_of_food"></i>
+    </div>
+  </div>
+  <div class="row">
+        <div class="col-xs-5 col-sm-5 col-lg-5">
+          <div class="card no-gutters" id="cardA">
+            <img class="card-img-top col-12" id="imgA" alt="Image not available" onerror="this.src='burger.jpg';">
+            <div class="card-body">
+            <h5 class="card-title" id="nomeA"></h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary" onclick="post_answer('a')">This one <i class="em em-face_with_thermometer"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <i class="em em-vs" id="vs"></i>
+        </div>
+        <div class="col-xs-5 col-sm-5 col-lg-5">
+            <div class="card no-gutters" id="cardB">
+                <img class="card-img-top col-12" id="imgB" alt="Image not available" onerror="this.src='burger.jpg';">
+                <div class="card-body">
+                <h5 class="card-title" id="nomeB"></h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary" onclick="post_answer('b')">This one <i class="em em-face_with_open_mouth_vomiting"></i></a>
+                </div>
+            </div>
+      </div>
+    </div>
+    <div class="row">
+    	<div class="col-xs-8 col-sm-8 col-lg-8" id="score_css"> </div>
+        <div class="col-xs-2 col-sm-2 col-lg-2" id="p1score_css">
+                <div class="scr"><i class="em em-gem"></i> P1: <b id="p1_score"></b></div>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-lg-2" id="p2score_css">
+            <div class="scr"><i class="em em-gem" style=" -webkit-filter: hue-rotate(180deg);" ></i> P2: <b id="p2_score"></b></div>
+        </div>
+    </div>
+
+
+
+        <!--
+        <img id="imgA" >
+
+        <div class="my-content-a">
+
+            <p id="nomeA"></p>
+            <button id="A" class="astext" onclick="post_answer(this)"><i class="em em-white_check_mark"></i></button>
+
+        </div>
+        -->
+
+
+
+        <!--
+        <img id="imgB" >
+        <div class="my-content-b">
+
+            <p id="nomeB"></p>
+            <button id="B" class="astext" onclick="post_answer(this)"><i class="em em-white_check_mark"></i></button>
+
+        </div>
+        -->
+
+
+</div>
 </body>
 </html>

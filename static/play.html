@@ -22,21 +22,18 @@
 </div>
 <div class="scr"><p id="score"></p></div>
 -->
-<div class="container">
-  <div class="row" id="top_row">
-    <div class="col">
+<div class="container" id="alert">
+  <div class="row" >
+    <div class="col-xs-12 col-sm-12 col-lg-12" id="top_row">
         <i class="em em-shallow_pan_of_food"></i><i class="em em-cold_sweat"></i>
         Pick the worst rated place
         <i class="em em-cold_sweat"></i><i class="em em-shallow_pan_of_food"></i>
     </div>
-    <div class="col">
-      <div class="scr"><i class="em em-gem"></i> Score: <b id="score"></b></div>
-    </div>
   </div>
   <div class="row">
-        <div class="col">
-          <div class="card no-gutters" style="width: 18rem;">
-            <img class="card-img-top col-12" id="imgA" alt="Image not available">
+        <div class="col-xs-5 col-sm-5 col-lg-5">
+          <div class="card no-gutters" id="cardA">
+            <img class="card-img-top col-12" id="imgA" alt="Image not available" onerror="this.src='burger.jpg';">
             <div class="card-body">
             <h5 class="card-title" id="nomeA"></h5>
             <p class="card-text"></p>
@@ -44,20 +41,25 @@
             </div>
           </div>
         </div>
-    <div class="col">
-        <i class="em em-vs" id="vs"></i>
-    </div>
-    <div class="col">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" id="imgB" alt="Image not available">
-            <div class="card-body">
-            <h5 class="card-title" id="nomeB"></h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary" onclick="post_answer('b')">This one <i class="em em-face_with_open_mouth_vomiting"></i></a>
-            </div>
+        <div class="col">
+            <i class="em em-vs" id="vs"></i>
         </div>
-  </div>
-</div>
+        <div class="col-xs-5 col-sm-5 col-lg-5">
+            <div class="card no-gutters" id="cardB">
+                <img class="card-img-top col-12" id="imgB" alt="Image not available" onerror="this.src='burger.jpg';">
+                <div class="card-body">
+                <h5 class="card-title" id="nomeB"></h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary" onclick="post_answer('b')">This one <i class="em em-face_with_open_mouth_vomiting"></i></a>
+                </div>
+            </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-12" id="score_css">
+                <div class="scr"><i class="em em-gem"></i> Score: <b id="score"></b></div>
+            </div>
+    </div>
 
 
 

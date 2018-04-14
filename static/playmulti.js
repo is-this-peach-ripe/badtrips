@@ -24,11 +24,11 @@ function post_answer(u, ans) {
         else if (data['correct'] === true){
             if (u === 1){
                 p1_score++;
-                $("#p1_score").html("Player 1: " + p1_score);
+                $("#p1_score").html(p1_score);
             }
             else if(u === 2){
                 p2_score++;
-                $("#p2_score").html("Player 2: " + p2_score);
+                $("#p2_score").html(p2_score);
             }
             newQuestion();
         }
@@ -69,12 +69,16 @@ function key_handle(e) {
 function newQuestion() {
     $.ajax("/newquestion", {dataType:"json", method:"POST"}).done(function (data) {
         console.log(data);
-        $("#p1_score").html("Player 1: " + p1_score);
-        $("#p2_score").html("Player 2: " + p2_score);
+        $("#p1_score").html(p1_score);
+        $("#p2_score").html(p2_score);
         $('#A').html(data['A'].name);
         $('#A').val(data['A'].name);
         $('#B').html(data['B'].name);
         $('#B').val(data['B'].name);
+        var a_url = data['A'].image_url;
+        var b_url = data['B'].image_url;
+        $('#imgA').attr("src", a_url);
+        $('#imgB').attr("src", b_url);
         p1_enable = true;
         p2_enable = true;
     }).fail(function () {

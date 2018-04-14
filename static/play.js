@@ -18,12 +18,21 @@ function post_answer(bt) {
     $.ajax("/answer", {dataType:"json", method:"POST", data:{answer: value}}).done(function (data) {
         console.log(data);
         if (data['correct'] === false ){
+            if(bt==='a')
+                $('#cardA').css({'backgroundColor': 'IndianRed'});
+            else
+                $('#cardB').css({'backgroundColor': 'IndianRed'});
             //window.alert("gameover\nfinal score: " + score);
             get_leaderboard();
         }
         else {
+            if(bt==='a')
+                $('#cardA').css({'backgroundColor': 'LightGreen'});
+            else
+                $('#cardB').css({'backgroundColor': 'LightGreen'});
             score++;
             newQuestion();
+
         }
     });
 }
@@ -58,6 +67,9 @@ function newQuestion() {
         $('#A').val(valueA);
         $('#nomeB').html(valueB);
         $('#B').val(valueB);
+        $('#cardA').css({'backgroundColor': 'LightGoldenRodYellow'});
+        $('#cardB').css({'backgroundColor': 'LightGoldenRodYellow'});
+
     }).fail(function () {
         console.log("erro");
     });
