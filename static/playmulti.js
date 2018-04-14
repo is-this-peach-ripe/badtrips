@@ -14,12 +14,17 @@ function post_answer(u, ans) {
         if (data['correct'] === false ){
             if (u === 1){
                 p1_enable = false;
+                $('#button_p1').attr("class", "btn btn-outline-danger");
             }
             else if(u === 2){
                 p2_enable = false;
+                $('#button_p2').attr("class", "btn btn-outline-danger");
+
             }
             if (!p1_enable && !p2_enable){
-                alert("tudo mal");
+                $('#button_p1').attr("class", "btn btn-outline-danger");
+                $('#button_p2').attr("class", "btn btn-outline-danger");
+                // alert("tudo mal");
                 newQuestion();
             }
         }
@@ -27,10 +32,14 @@ function post_answer(u, ans) {
             if (u === 1){
                 p1_score++;
                 $("#p1_score").html(p1_score);
+                $('#button_p1').attr("class", "btn btn-outline-success");
+
             }
             else if(u === 2){
                 p2_score++;
                 $("#p2_score").html(p2_score);
+                $('#button_p2').attr("class", "btn btn-outline-success");
+
             }
             newQuestion();
         }
@@ -89,6 +98,10 @@ function newQuestion() {
         p2_enable = true;
         $('#cardA').css({'backgroundColor': 'LightGoldenRodYellow'});
         $('#cardB').css({'backgroundColor': 'LightGoldenRodYellow'});
+        $('#button_p1').attr("class", "btn btn-outline-primary");
+        $('#button_p2').attr("class", "btn btn-outline-warning");
+
+
     }).fail(function () {
         console.log("erro");
     });
