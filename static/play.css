@@ -7,9 +7,9 @@ html, body {
 
 }
 
-.card-img-top{}
+.card-img-top{max-height: 50vh; object-fit: cover;}
 
-#top_row{margin-bottom: 3vh; }
+#top_row{margin-bottom: 3vh; margin-left: 15vw; }
 
 #vs {
     top: 50vh;
