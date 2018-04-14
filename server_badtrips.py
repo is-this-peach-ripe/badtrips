@@ -32,8 +32,8 @@ def play():
     :return:
     '''
     id = newGame(request.form['location'], request.form['username'])
-    print(id)
     session['id'] = id
+    app.logger.debug('New game created with location: '+ request.form['location'] +' id: ' + str(id))
     return send_from_directory(static_dir, 'play.html')
 
 @app.route('/newquestion', methods=['POST'])
@@ -47,8 +47,9 @@ def newQuestion():
     :return:
     '''
     game = getGame(session['id'])
-    print(session['id'])
-    print(game)
+    app.logger.debug("New question from "+ str(session['id']) +"\nGame object: "+ str(game) +"\n"  )
+    if game['state'] != "playing":
+        return jsonify({"state":"no no no no"})
     question, answer = yelp_stuff.createNewQuestion(game['location'])
     store_answer(answer, session['id'], game)
     return jsonify(question)
@@ -61,21 +62,27 @@ def answer():
     '''
     answer = request.form['answer']
     game = getGame(session['id'])
-
-    responce = check_answer(answer, game)
-    #devolve resposta correcta
-    pass
+    if game['state'] != "playing":
+        return jsonify({"state":"no no no no"})
+    response, correct_answer = check_answer(answer, session['id'], game)
+    app.logger.debug("New answer from " + str(session['id']) +"\nGame object: " + str(game) + "\nAnswer: " + answer)
+    if response:
+        return jsonify({"correct": True, "answer": correct_answer})
+    else:
+        register_gameover(session['id'], game)
+        return jsonify({"correct": False, "answer": correct_answer})
 
 def newGame(location, username):
     '''
-    create a new game that has a location, username, id and score
+    create a new game that has a location, username, id, score and state
     :return: session id
     '''
     id = os.urandom(32)
     game = {
         "location": location,
         "score": 0,
-        "username": username
+        "username": username,
+        "state": "playing"
     }
     r.set(id, json.dumps(game))
     return id
@@ -100,7 +107,37 @@ def store_answer(answer, id, game):
     :return:
     '''
     game["answer"] = answer
-    r.set(id, game)
+    r.set(id, json.dumps(game))
 
-def check_answer(answer, game):
-    return game["answer"] == answer
+def leaderboard():
+    l = r.zrevrange("scores", 0, 10, withscores=True)
+    print(l)
+    return l
+
+def register_gameover(id, game):
+    '''
+    Register in the db this user score and set the state to gameover
+    :param id:
+    :param game:
+    :return:
+    '''
+    game['state'] = 'gameover'
+    r.set(id, json.dumps(game))
+    score = r.zscore("scores", game["username"])
+    if score:
+        if score < game['score']:
+            r.zadd("scores", game['username'], game['score'])
+
+def check_answer(answer, id, game):
+    '''
+    Check if the user answer is correct and updates the user score in the db
+    :param answer: the user answer
+    :param id: this game id
+    :param game: this game session
+    :return: True if is correct,false if incorrect and
+    '''
+    if game["answer"] == answer:
+        game["score"] += 1
+        r.set(id, json.dumps(game))
+        return True, game["answer"]
+    return False, game["answer"]
