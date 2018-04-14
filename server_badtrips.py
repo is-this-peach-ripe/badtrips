@@ -2,7 +2,7 @@ from flask import Flask, session, request, jsonify, send_from_directory
 import os
 import json
 import redis
-import yelp_stuff
+import wrapper_yelp
 
 r = redis.Redis(host='localhost', port=6379, password='')
 app = Flask("badtrips", static_url_path='')
@@ -50,7 +50,7 @@ def newQuestion():
     app.logger.debug("New question from "+ str(session['id']) +"\nGame object: "+ str(game) +"\n"  )
     if game['state'] != "playing":
         return jsonify({"state":"no no no no"})
-    question, answer = yelp_stuff.createNewQuestion(game['location'])
+    question, answer = wrapper_yelp.createNewQuestion(game['location'])
     store_answer(answer, session['id'], game)
     return jsonify(question)
 

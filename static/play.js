@@ -1,15 +1,6 @@
 var score = 0;
 
-$.ajax("/newquestion", {dataType:"json", method:"POST"}).done(function (data) {
-    console.log(data);
-    $("#score").html(score);
-    $('#A').html(data['A'].nome);
-    $('#A').val(data['A'].nome);
-    $('#B').html(data['B'].nome);
-    $('#B').val(data['B'].nome);
-}).fail(function () {
-    console.log("erro");
-});
+newQuestion();
 
 function post_answer(bt) {
     console.log(bt);
@@ -20,7 +11,7 @@ function post_answer(bt) {
         }
         else {
             score++;
-            $("#score").html(score);
+            newQuestion();
         }
     });
 }
@@ -29,4 +20,17 @@ function get_leaderboard() {
     $.ajax("/leaderboard", {datatype:"json", method:"POST"}).done(function (data) {
         console.log(data);
     })
+}
+
+function newQuestion() {
+    $.ajax("/newquestion", {dataType:"json", method:"POST"}).done(function (data) {
+        console.log(data);
+        $("#score").html(score);
+        $('#A').html(data['A'].name);
+        $('#A').val(data['A'].name);
+        $('#B').html(data['B'].name);
+        $('#B').val(data['B'].name);
+    }).fail(function () {
+        console.log("erro");
+    });
 }
