@@ -2,6 +2,7 @@ var p1_score = 0;
 var p2_score = 0;
 var p1_enable = true;
 var p2_enable = true;
+var wait = false;
 var nameA = "";
 var nameB = "";
 
@@ -19,7 +20,6 @@ function post_answer(u, ans) {
             else if(u === 2){
                 p2_enable = false;
                 $('#button_p2').attr("class", "btn btn-outline-danger");
-
             }
             if (!p1_enable && !p2_enable){
                 $('#button_p1').attr("class", "btn btn-outline-danger");
@@ -27,6 +27,7 @@ function post_answer(u, ans) {
                 // alert("tudo mal");
                 newQuestion();
             }
+            wait = false;
         }
         else if (data['correct'] === true){
             if (u === 1){
@@ -39,9 +40,9 @@ function post_answer(u, ans) {
                 p2_score++;
                 $("#p2_score").html(p2_score);
                 $('#button_p2').attr("class", "btn btn-outline-success");
-
             }
             newQuestion();
+            wait = false;
         }
     });
 }
@@ -55,22 +56,26 @@ function get_leaderboard() {
 function key_handle(e) {
     var code = e.key;
     console.log(e);
-    if(code === 'a' && p1_enable){ //a
+    if(code === 'a' && p1_enable && !wait){ //a
+        wait = true;
         //p1
         //A
         post_answer(1, nameA);
     }
-    else if (code === 's' && p1_enable){ //s
+    else if (code === 's' && p1_enable && !wait){ //s
+        wait = true;
         //p1
         //B
         post_answer(1, nameB);
     }
-    else if(code === 'k' && p2_enable){ //k
+    else if(code === 'k' && p2_enable && !wait){ //k
+        wait = true;
         //p2
         //A
         post_answer(2, nameA);
     }
-    else if(code === 'l' && p2_enable){ //l
+    else if(code === 'l' && p2_enable && !wait){ //l
+        wait = true;
         //p2
         //B
         post_answer(2, nameB);
@@ -100,8 +105,6 @@ function newQuestion() {
         $('#cardB').css({'backgroundColor': 'LightGoldenRodYellow'});
         $('#button_p1').attr("class", "btn btn-outline-primary");
         $('#button_p2').attr("class", "btn btn-outline-warning");
-
-
     }).fail(function () {
         console.log("erro");
     });
