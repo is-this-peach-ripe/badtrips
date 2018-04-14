@@ -2,7 +2,7 @@ from flask import Flask, session, request, jsonify, send_from_directory
 import os
 import json
 import redis
-import yelp_stuff
+import wrapper_yelp
 
 r = redis.Redis(host='localhost', port=6379, password='')
 app = Flask("badtrips", static_url_path='')
@@ -50,7 +50,7 @@ def newQuestion():
     app.logger.debug("New question from "+ str(session['id']) +"\nGame object: "+ str(game) +"\n"  )
     if game['state'] != "playing":
         return jsonify({"state":"no no no no"})
-    question, answer = yelp_stuff.createNewQuestion(game['location'])
+    question, answer = wrapper_yelp.createNewQuestion(game['location'])
     store_answer(answer, session['id'], game)
     return jsonify(question)
 
@@ -93,9 +93,9 @@ def answermulti():
     response, correct_answer = check_answer_multi(answer, user, session['id'], game)
     return jsonify({"correct": response, "answer": correct_answer})
 
-@app.route('/playmulti')
+@app.route('/playmulti', methods=['POST'])
 def multi():
-    id = newMultiGame(request.form['location'], request.form['p1'], request.form['p1'])
+    id = newMultiGame(request.form['location'], request.form['p1'], request.form['p2'])
     session['id'] = id
     app.logger.debug('New multiplayer game created with location: ' + request.form['location'] + ' id: ' + str(id))
     return send_from_directory(static_dir, 'playmulti.html')
@@ -124,7 +124,7 @@ def getGame(id):
     game = r.get(id)
     print("game from redis")
     print(game)
-    return json.loads(game)
+    return json.loads(game.decode('utf-8'))
 
 def store_answer(answer, id, game):
     '''
