@@ -25,8 +25,8 @@ function get_leaderboard() {
 function newQuestion() {
     $.ajax("/newquestion", {dataType:"json", method:"POST"}).done(function (data) {
         console.log(data);
-    var a_url = data['A'].img_url;
-    var b_url = data['B'].img_url;
+    var a_url = data['A'].image_url;
+    var b_url = data['B'].image_url;
     $('#imgA').attr("src", a_url);
     $('#imgB').attr("src", b_url);
     $("#score").html(score);

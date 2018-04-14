@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Playing badtrip!</title>
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <script src="/static/play.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/play.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 </head>
 <body>
 
-<i class="em em-vs" id="vs"></i>
+<!--
 <div class="top">
     <i class="em em-shallow_pan_of_food"></i><i class="em em-cold_sweat"></i>
     Pick the worst rated place
@@ -19,9 +21,47 @@
 
 </div>
 <div class="scr"><p id="score"></p></div>
-<div class="flex-container">
+-->
+<div class="container">
+  <div class="row" id="top_row">
+    <div class="col">
+        <i class="em em-shallow_pan_of_food"></i><i class="em em-cold_sweat"></i>
+        Pick the worst rated place
+        <i class="em em-cold_sweat"></i><i class="em em-shallow_pan_of_food"></i>
+    </div>
+    <div class="col">
+      <div class="scr"><i class="em em-gem"></i> Score: <b id="score"></b></div>
+    </div>
+  </div>
+  <div class="row">
+        <div class="col">
+          <div class="card no-gutters" style="width: 18rem;">
+            <img class="card-img-top col-12" id="imgA" alt="Image not available">
+            <div class="card-body">
+            <h5 class="card-title" id="nomeA"></h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary">This one <i class="em em-face_with_thermometer"></i></a>
+            </div>
+          </div>
+        </div>
+    <div class="col">
+        <i class="em em-vs" id="vs"></i>
+    </div>
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" id="imgB" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title" id="nomeB"></h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary">This one <i class="em em-face_with_open_mouth_vomiting"></i></a>
+            </div>
+        </div>
+  </div>
+</div>
 
-    <div class="flex-a">
+
+
+        <!--
         <img id="imgA" >
 
         <div class="my-content-a">
@@ -30,9 +70,11 @@
             <button id="A" class="astext" onclick="post_answer(this)"><i class="em em-white_check_mark"></i></button>
 
         </div>
-    </div>
+        -->
 
-    <div class="flex-b">
+
+
+        <!--
         <img id="imgB" >
         <div class="my-content-b">
 
@@ -40,7 +82,8 @@
             <button id="B" class="astext" onclick="post_answer(this)"><i class="em em-white_check_mark"></i></button>
 
         </div>
-    </div>
+        -->
+
 
 </div>
 </body>

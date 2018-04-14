@@ -2,118 +2,20 @@ html, body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  position:absolute; top:0; bottom:0; right:0; left:0;
-    font-size: 5vh;
+  position:absolute; top:3vh; bottom:0; right:0; left:0;
+    font-size: 3vh;
 
 }
 
-#imgA {
-    -webkit-filter: saturate(2) brightness(85%);
+.card-img-top{}
 
-    flex: 0 1 auto;
-    height: 100%;
-}
+#top_row{margin-bottom: 3vh; }
 
-#imgB {
-    -webkit-filter: saturate(2) brightness(85%);
-    flex: 0 1 auto;
-    height: 100%;
-}
-
-body{
-    font-family: 'Lato', sans-serif;
-}
-
-.flex-container{
-     display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-.flex-a{
-    display: flex;
-    -webkit-flex: 1;
-    flex: 1;
-    -webkit-flex-basis: 0;
-    flex-basis: 0;
-    background: tomato;
-    min-height: 100%;
-    max-width: 50%;
-}
-
-.flex-b{
-    display: flex;
-    -webkit-flex: 1;
-    flex: 1;
-    -webkit-flex-basis: 0;
-    flex-basis: 0;
-    background: dodgerblue;
-    min-height: 100%;
-    max-width: 50%;
-}
-
-.my-content-a {
-    position: absolute;
+#vs {
     top: 50vh;
-    left: 10vw;
+    margin-top: 60%;
+    margin-left: 43%;
     align-content: center;
     text-align: center;
-    margin: 0 auto;
-}
-#nomeA{
-    background-color: rgba(100, 255, 70, 0.6);}
-
-
-.my-content-b {
-    position: absolute;
-    top: 50vh;
-    left: 65vw;
-    text-align: center;
-
-}
-#nomeB{
-    background-color: rgba(100, 70, 255, 0.6);}
-.top{
-    position: absolute;
-    top: 2%;
-    left:25vw;
-    right:25vw;
-    z-index: 2;
-    align-content: center;
-    text-align: center;
-    margin-left: auto;
     margin-right: auto;
-    background-color: rgba(255, 100, 70, 0.8);
-}
-.scr{
-    position: absolute;
-    top: 13vh;
-    left:49.2vw;
-    z-index: 2;
-    align-content: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(255, 100, 70, 0.8);
-}
-.astext {
-    background:none;
-    border:none;
-    margin:0;
-    padding:0;
-    display: block;
-    font-size : 30px;
-}
-#vs {position: absolute;
-    top: 50vh;
-    left:48vw;
-    z-index: 2;
-    align-content: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;}
+    font-size: 7vh;}
