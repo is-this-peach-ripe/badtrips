@@ -2,3 +2,4 @@ redis>=2.10.6
 Flask>=0.12.2
 requests>=2.18.4
 pandas>=0.22.0
+googlemaps>=2.5.1
