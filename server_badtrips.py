@@ -3,6 +3,7 @@ import os
 import json
 import redis
 import wrapper_yelp
+import google_photo
 
 r = redis.Redis(host='localhost', port=6379, password='')
 app = Flask("badtrips", static_url_path='')
@@ -54,6 +55,14 @@ def newQuestion():
     if game['state'] != "playing":
         return jsonify({"state":"no no no no"})
     question, answer, worst_rev = wrapper_yelp.createNewQuestion(game['location'])
+    if question['A']['image_url'] == "":
+        app.logger.debug("A sem imagem")
+        question['A']['image_url'] = google_photo.get_photo(question['A']['name'],
+                                                            (question['A']['coordinates.latitude'], question['A']['coordinates.longitude']))
+    if question['B']['image_url'] == "":
+        app.logger.debug("B sem imagem")
+        question['B']['image_url'] = google_photo.get_photo(question['B']['name'],
+                                                            (question['B']['coordinates.latitude'], question['B']['coordinates.longitude']))
     store_answer(answer, session['id'], game)
     return jsonify(question)
 
