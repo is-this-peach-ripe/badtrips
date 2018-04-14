@@ -14,7 +14,7 @@ def createNewQuestion(location):
         "A": {"nome": "Café do barbosa", "tipo": "cafe",
               "img_url": "http://oje-50ea.kxcdn.com/wp-content/uploads/2017/03/cafe-925x578.jpg"},
         "B": {"nome": "Café do Zé", "tipo": "cafe",
-              "img_url": "http://oje-50ea.kxcdn.com/wp-content/uploads/2017/03/cafe-925x578.jpg"}
+              "img_url": "https://i.imgur.com/LoL7n.jpg"}
     }
     answer = "Café do Zé"
     return question, answer

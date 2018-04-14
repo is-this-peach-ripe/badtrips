@@ -5,10 +5,43 @@
     <title>Playing badtrip!</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="/static/play.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/play.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 </head>
 <body>
-<button id="A" style="display: block; margin: auto" onclick="post_answer(this)"></button>
-<button id="B" style="display: block; margin: auto" onclick="post_answer(this)"></button>
-<p id="score"></p>
+
+<i class="em em-vs" id="vs"></i>
+<div class="top">
+    <i class="em em-shallow_pan_of_food"></i><i class="em em-cold_sweat"></i>
+    Pick the worst rated place
+    <i class="em em-cold_sweat"></i><i class="em em-shallow_pan_of_food"></i>
+
+</div>
+<div class="scr"><p id="score"></p></div>
+<div class="flex-container">
+
+    <div class="flex-a">
+        <img id="imgA" >
+
+        <div class="my-content-a">
+
+            <p id="nomeA"></p>
+            <button id="A" class="astext" onclick="post_answer(this)"><i class="em em-white_check_mark"></i></button>
+
+        </div>
+    </div>
+
+    <div class="flex-b">
+        <img id="imgB" >
+        <div class="my-content-b">
+
+            <p id="nomeB"></p>
+            <button id="B" class="astext" onclick="post_answer(this)"><i class="em em-white_check_mark"></i></button>
+
+        </div>
+    </div>
+
+</div>
 </body>
 </html>

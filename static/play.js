@@ -25,11 +25,15 @@ function get_leaderboard() {
 function newQuestion() {
     $.ajax("/newquestion", {dataType:"json", method:"POST"}).done(function (data) {
         console.log(data);
-        $("#score").html(score);
-        $('#A').html(data['A'].name);
-        $('#A').val(data['A'].name);
-        $('#B').html(data['B'].name);
-        $('#B').val(data['B'].name);
+    var a_url = data['A'].img_url;
+    var b_url = data['B'].img_url;
+    $('#imgA').attr("src", a_url);
+    $('#imgB').attr("src", b_url);
+    $("#score").html(score);
+    $('#nomeA').html(data['A'].name);
+    $('#A').val(data['A'].name);
+    $('#nomeB').html(data['B'].name);
+    $('#B').val(data['B'].name);
     }).fail(function () {
         console.log("erro");
     });
