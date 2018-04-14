@@ -24,3 +24,9 @@ function post_answer(bt) {
         }
     });
 }
+
+function get_leaderboard() {
+    $.ajax("/leaderboard", {datatype:"json", method:"POST"}).done(function (data) {
+        console.log(data);
+    })
+}

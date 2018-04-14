@@ -19,8 +19,6 @@ def createNewQuestion(location):
     answer = "Café do Zé"
     return question, answer
 
-    pass
-
 def getAllInformationAvailable(location):
     offsets=OFFSETS
     temp={"businesses":[]}

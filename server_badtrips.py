@@ -69,8 +69,36 @@ def answer():
     if response:
         return jsonify({"correct": True, "answer": correct_answer})
     else:
+        app.logger.debug("GAME OVER")
         register_gameover(session['id'], game)
         return jsonify({"correct": False, "answer": correct_answer})
+
+@app.route('/leaderboard',methods=['POST'])
+def lead():
+    l = leaderboard()
+    j = []
+    for i  in l:
+        print(i)
+        j.append({str(i[0]):i[1]})
+    print(j)
+    return jsonify(j)
+
+@app.route('/answermulti', methods=['POST'])
+def answermulti():
+    answer = request.form['answer']
+    user = request.form['user']
+    game = getGame(session['id'])
+    if game['state'] != "playing":
+        return jsonify({"state":"no no no no"})
+    response, correct_answer = check_answer_multi(answer, user, session['id'], game)
+    return jsonify({"correct": response, "answer": correct_answer})
+
+@app.route('/playmulti')
+def multi():
+    id = newMultiGame(request.form['location'], request.form['p1'], request.form['p1'])
+    session['id'] = id
+    app.logger.debug('New multiplayer game created with location: ' + request.form['location'] + ' id: ' + str(id))
+    return send_from_directory(static_dir, 'playmulti.html')
 
 def newGame(location, username):
     '''
@@ -124,9 +152,26 @@ def register_gameover(id, game):
     game['state'] = 'gameover'
     r.set(id, json.dumps(game))
     score = r.zscore("scores", game["username"])
-    if score:
+    app.logger.debug("SCORE IN BD: " + str(score))
+    if score is not None:
         if score < game['score']:
+            app.logger.debug("ADDING score to leaderboard")
             r.zadd("scores", game['username'], game['score'])
+    else:
+        app.logger.debug("ADDING score to leaderboard")
+        r.zadd("scores", game['username'], game['score'])
+
+
+def check_answer_multi(answer, user, id, game):
+    if game["answer"] == answer:
+        if user == 1:
+            game['p1_score'] += 1
+        elif user == 2:
+            game['p2_score'] += 1
+        r.set(id, json.dumps(game))
+        return True, game['answer']
+    return False, game['answer']
+
 
 def check_answer(answer, id, game):
     '''
@@ -141,3 +186,16 @@ def check_answer(answer, id, game):
         r.set(id, json.dumps(game))
         return True, game["answer"]
     return False, game["answer"]
+
+def newMultiGame(location, p1, p2):
+    id = os.urandom(32)
+    game = {
+        "location": location,
+        "score_p1": 0,
+        "score_p2": 0,
+        "p1": p1,
+        "p2": p2,
+        "state": "playing"
+    }
+    r.set(id, json.dumps(game))
+    return id
