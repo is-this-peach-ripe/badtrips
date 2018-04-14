@@ -84,7 +84,7 @@ def lead():
     j = []
     for i  in l:
         print(i)
-        j.append({str(i[0]):i[1]})
+        j.append([str(i[0]),i[1]])
     print(j)
     return jsonify(j)
 
