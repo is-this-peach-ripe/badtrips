@@ -112,4 +112,4 @@ function newQuestion() {
         console.log("erro");
     });
 }
-window.addEventListener("keypress", key_handle);
+window.addEventListener("keydown", key_handle);
