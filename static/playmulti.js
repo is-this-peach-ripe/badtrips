@@ -5,7 +5,9 @@ var p2_enable = true;
 var wait = false;
 var nameA = "";
 var nameB = "";
-
+var vomit = new Audio("/static/sounds/vomit.mp3");
+var ding = new Audio("/static/sounds/ding.mp3");
+var win = new Audio("/static/sounds/winner.mp3");
 newQuestion();
 
 function post_answer(u, ans) {
@@ -31,6 +33,7 @@ function post_answer(u, ans) {
             }
         }
         else if (data['correct'] === true){
+            vomit.play();
             if (u === 1){
                 p1_score++;
                 $("#p1_score").html(p1_score);
@@ -73,7 +76,7 @@ function get_leaderboard() {
             leaderboard = leaderboard+li_s+game[0]+span_s+game[1]+end_li;
         }
         leaderboard = leaderboard + "</ul>";
-        console.log(data);
+        win.play();
     })
 }
 
@@ -108,6 +111,7 @@ function key_handle(e) {
 
 function newQuestion() {
     $.ajax("/newquestion", {dataType:"json", method:"POST"}).done(function (data) {
+        ding.play();
         console.log(data);
         nameA = data['A'].name;
         nameB = data['B'].name;

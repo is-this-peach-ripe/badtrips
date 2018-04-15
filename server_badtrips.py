@@ -90,7 +90,8 @@ def answer():
 
 @app.route('/leaderboard',methods=['POST'])
 def lead():
-    l = leaderboard()
+    game = getGame(session['id'])
+    l = leaderboard(game)
     j = []
     for i  in l:
         print(i)
@@ -172,8 +173,8 @@ def store_review(review, id, game):
     r.set(id, json.dumps(game))	
 
 
-def leaderboard():
-    l = r.zrevrange("scores", 0, 5, withscores=True)
+def leaderboard(game):
+    l = r.zrevrange("scores" + game['location'], 0, 5, withscores=True)
     print(l)
     return l
 
@@ -187,15 +188,15 @@ def register_gameover(id, game):
     '''
     game['state'] = 'gameover'
     r.set(id, json.dumps(game))
-    score = r.zscore("scores", game["username"])
+    score = r.zscore("scores" + game['location'], game["username"])
     app.logger.debug("SCORE IN BD: " + str(score))
     if score is not None:
         if score < game['score']:
             app.logger.debug("ADDING score to leaderboard")
-            r.zadd("scores", game['username'], game['score'])
+            r.zadd("scores"+ game['location'], game['username'], game['score'])
     else:
         app.logger.debug("ADDING score to leaderboard")
-        r.zadd("scores", game['username'], game['score'])
+        r.zadd("scores" + game['location'], game['username'], game['score'])
 
 
 def check_answer_multi(answer, user, id, game):
