@@ -112,7 +112,9 @@ def answermulti():
 
 @app.route('/playmulti', methods=['POST'])
 def multi():
-    id = newMultiGame(request.form['location'], request.form['p1'], request.form['p2'])
+    p1_name = "p1"
+    p2_name = "p2"
+    id = newMultiGame(request.form['location'], p1_name, p2_name)
     session['id'] = id
     app.logger.debug('New multiplayer game created with location: ' + request.form['location'] + ' id: ' + str(id))
     return send_from_directory(static_dir, 'playmulti.html')
