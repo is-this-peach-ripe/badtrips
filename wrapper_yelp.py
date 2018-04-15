@@ -15,11 +15,18 @@ SORT_PARAM = "distance"
 
 ratings = [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]
 
-data = json.load(open("Porto.json"))
-df = json_normalize(data["businesses"])
+data_Porto = json.load(open("Porto.json"))
+df_Porto = json_normalize(data_Porto["businesses"])
+data_Lisboa = json.load(open("Lisbon.json"))
+df_Lisboa = json_normalize(data_Lisboa["businesses"])
 
 
 def createNewQuestion(location, difficulty=None):
+    if(location == 'lisboa'):
+        df = df_Lisboa
+    else:
+        df = df_Porto
+
     a = df.sample(n=1, axis=0)
     rating_a = a['rating'].values[0]
     if difficulty is not None:
@@ -123,13 +130,16 @@ def getJson():
         'businesses': [],
     }
     response = request(URL, API_KEY, DEFAULT_LOCATION, 0)
+    #print(response)
     out['businesses'].extend(response['businesses'])
     offset = int(response['total'] / 50) + 1
-
+    if offset > 20:
+        offset = 20
     for i in range(1, offset):
         response = request(URL, API_KEY, DEFAULT_LOCATION, i * 50)
+        print(response)
         out['businesses'].extend(response['businesses'])
-    locationDataFile = open('test.json', 'w')
+    locationDataFile = open('Lisbon.json', 'w')
     locationDataFile.write(json.dumps(out, indent=4, sort_keys=True))
     locationDataFile.close()
 
