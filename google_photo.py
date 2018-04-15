@@ -11,12 +11,14 @@ def get_photo(name, coord):
     if os.path.isfile(fname):
         return fname
     photo = None
-    r = c.places(name, location=coord)
+    r = c.places(name, location=coord, radius=50000)
+    #print(r['results'])
     for b in r['results']:
         if b['name'] == name:
             photo = random.choice(b['photos'])
             break
     if photo is None:
+        print("No photos...")
         return ""
     else:
         photo = c.places_photo(photo['photo_reference'], max_width=5000, max_height=5000)

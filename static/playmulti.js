@@ -16,10 +16,12 @@ function post_answer(u, ans) {
             if (u === 1){
                 p1_enable = false;
                 $('#button_p1').attr("class", "btn btn-danger");
+                wait = false;
             }
             else if(u === 2){
                 p2_enable = false;
                 $('#button_p2').attr("class", "btn btn-danger");
+                wait = false;
             }
             if (!p1_enable && !p2_enable){
                 $('#button_p1').attr("class", "btn btn-danger");
@@ -39,6 +41,7 @@ function post_answer(u, ans) {
                 $("#p2_score").html(p2_score);
                 $('#button_p2').attr("class", "btn btn-success");
             }
+
             if(ans === nameA)
                 $('#cardA').css({'backgroundColor': 'LightGreen'});
             else
@@ -57,8 +60,6 @@ function post_answer(u, ans) {
                 newQuestion();
             }
         }
-        wait = false;
-
     });
 }
 
@@ -120,6 +121,7 @@ function newQuestion() {
         $('#cardB').css({'backgroundColor': 'LightGoldenRodYellow'});
         $('#button_p1').attr("class", "btn btn-outline-primary");
         $('#button_p2').attr("class", "btn btn-outline-warning");
+        wait = false;
     }).fail(function () {
         console.log("erro");
     });
