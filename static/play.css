@@ -21,7 +21,9 @@ html, body {
   font-size: 3vh;
   text-align: right;
 }
-
+img {
+  background: url('loading.gif') no-repeat;
+}
 #vs {
     top: 50vh;
     display: block;

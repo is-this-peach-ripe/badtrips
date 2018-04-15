@@ -171,7 +171,7 @@ def store_review(review, id, game):
 
 
 def leaderboard():
-    l = r.zrevrange("scores", 0, 10, withscores=True)
+    l = r.zrevrange("scores", 0, 5, withscores=True)
     print(l)
     return l
 
