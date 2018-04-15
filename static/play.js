@@ -62,6 +62,8 @@ function post_answer(bt) {
             }
             score++;
             setTimeout(function(){
+                $('#imgA').attr("src", "");
+                $('#imgB').attr("src", "");
                 newQuestion();
             }, 3000);
         }
