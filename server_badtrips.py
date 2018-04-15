@@ -142,7 +142,7 @@ def getGame(id):
     game = r.get(id)
     print("game from redis")
     print(game)
-    return json.loads(game.decode('utf-8'))
+    return json.loads(game)
 
 
 def store_answer(answer, id, game):

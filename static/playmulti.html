@@ -37,7 +37,7 @@
             <div class="card-body">
             <h5 class="card-title" id="nomeA"></h5>
             <p class="card-text"></p>
-            <a href="#" class="btn btn-primary" onclick="post_answer('a')">This one <i class="em em-face_with_thermometer"></i></a>
+<!--            <a href="#" class="btn btn-primary" onclick="post_answer('a')">This one <i class="em em-face_with_thermometer"></i></a> -->
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@
                 <div class="card-body">
                 <h5 class="card-title" id="nomeB"></h5>
                 <p class="card-text"></p>
-                <a href="#" class="btn btn-primary" onclick="post_answer('b')">This one <i class="em em-face_with_open_mouth_vomiting"></i></a>
+<!--                <a href="#" class="btn btn-primary" onclick="post_answer('b')">This one <i class="em em-face_with_open_mouth_vomiting"></i></a> -->
                 </div>
             </div>
       </div>
@@ -70,6 +70,25 @@
         </div>
     </div>
 
+    <div id="popup" class="modal fade" data-backdrop="static" data-keyboard="false" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title" style="text-align: left" id="winner"></h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Your knowledge of the nastiest establishments is without equal.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <a href="/" class="btn btn-default" role="button">Try Again</a>
+	      </div>
+	    </div>
+
+	  </div>
+</div>
 
 
         <!--
