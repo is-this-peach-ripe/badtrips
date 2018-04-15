@@ -20,7 +20,7 @@ def get_photo(name, coord):
                 break
     if photo is None:
         print("No photos...")
-        return ""
+        return "/static/burger.jpg"
     else:
         photo = c.places_photo(photo['photo_reference'], max_width=5000, max_height=5000)
         f = open(fname, 'wb')

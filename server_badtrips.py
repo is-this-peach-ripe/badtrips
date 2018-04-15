@@ -57,12 +57,18 @@ def newQuestion():
     question, answer, worst_rev = wrapper_yelp.createNewQuestion(game['location'])
     if question['A']['image_url'] == "":
         app.logger.debug("A sem imagem")
-        question['A']['image_url'] = google_photo.get_photo(question['A']['name'],
+        try:
+            question['A']['image_url'] = google_photo.get_photo(question['A']['name'],
                                                             (question['A']['coordinates.latitude'], question['A']['coordinates.longitude']))
+        except:
+            question['A']['image_url'] = "/static/burger.jpg"
     if question['B']['image_url'] == "":
         app.logger.debug("B sem imagem")
-        question['B']['image_url'] = google_photo.get_photo(question['B']['name'],
+        try:
+            question['B']['image_url'] = google_photo.get_photo(question['B']['name'],
                                                             (question['B']['coordinates.latitude'], question['B']['coordinates.longitude']))
+        except:
+            question['B']['image_url'] = "/static/burger.jpg"
     store_answer(answer, session['id'], game)
     store_review(worst_rev, session['id'], game)
     return jsonify(question)

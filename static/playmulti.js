@@ -8,6 +8,7 @@ var nameB = "";
 var vomit = new Audio("/static/sounds/vomit.mp3");
 var ding = new Audio("/static/sounds/ding.mp3");
 var win = new Audio("/static/sounds/winner.mp3");
+var wrong = new Audio("/static/sounds/error_short.mp3");
 newQuestion();
 
 function post_answer(u, ans) {
@@ -15,6 +16,7 @@ function post_answer(u, ans) {
     $.ajax("/answermulti", {dataType:"json", method:"POST", data:{user: u, answer: ans}}).done(function (data) {
         console.log(data);
         if (data['correct'] === false ){
+            wrong.play();
             if (u === 1){
                 p1_enable = false;
                 $('#button_p1').attr("class", "btn btn-danger");
@@ -49,17 +51,21 @@ function post_answer(u, ans) {
                 $('#cardA').css({'backgroundColor': 'LightGreen'});
             else
                 $('#cardB').css({'backgroundColor': 'LightGreen'});
-            if(p1_score >= 10) {
+            if(p1_score >= 5) {
                 $("#winner").html("Player 1 wins!");
                 $('#popup').modal('show');
                 window.removeEventListener("keydown", key_handle);
+                win.play();
             }
-            else if(p2_score >= 10) {
+            else if(p2_score >= 5) {
                 $("#winner").html("Player 2 wins!");
                 $('#popup').modal('show');
                 window.removeEventListener("keydown", key_handle);
+                win.play();
             }
             else {
+                $('#imgA').attr("src", "");
+                $('#imgB').attr("src", "");
                 newQuestion();
             }
         }
