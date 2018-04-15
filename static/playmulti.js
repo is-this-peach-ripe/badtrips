@@ -65,6 +65,14 @@ function post_answer(u, ans) {
 
 function get_leaderboard() {
     $.ajax("/leaderboard", {datatype:"json", method:"POST"}).done(function (data) {
+        var leaderboard = "<ul class=\"list-group\">";
+        var li_s = "<li class=\"list-group-item d-flex justify-content-between align-items-center\">";
+        var span_s = " <span class=\"badge badge-primary badge-pill\">";
+        var end_li = "</span></li>";
+        for (game of data){
+            leaderboard = leaderboard+li_s+game[0]+span_s+game[1]+end_li;
+        }
+        leaderboard = leaderboard + "</ul>";
         console.log(data);
     })
 }

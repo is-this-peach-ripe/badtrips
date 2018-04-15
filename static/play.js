@@ -8,10 +8,6 @@ var gameOverFirst = '<div class=\"card border-danger mb-3 \" style=\"width: 18re
 
 var gameOverSecond = '</ul><a href="/"><button type=\"button\" class=\"btn btn-success\">Try Again! <i class=\"em em-wink\"></i></button></a>' +
     '</div></div>';
-
-var vomit = new Audio("/static/sounds/vomit.mp3");
-var errorsound = new Audio("/static/sounds/error.mp3");
-var ding = new Audio("/static/sounds/ding.mp3");
 newQuestion();
 
 function post_answer(bt) {
@@ -30,7 +26,6 @@ function post_answer(bt) {
             get_leaderboard();
         }
         else {
-            vomit.play();
             if(bt==='a') {
                 $('#cardA').css({'backgroundColor': 'LightGreen'});
                 if(data['review'] != null) {
@@ -74,19 +69,25 @@ function get_leaderboard() {
         var leaderboard = "<ul class=\"list-group\">";
         var li_s = "<li class=\"list-group-item d-flex justify-content-between align-items-center\">";
         var span_s = " <span class=\"badge badge-primary badge-pill\">";
+        var span_p = " <span class=\"badge badge-success badge-pill\">";
         var end_li = "</span></li>";
+        var end_s = "</span>"
+        var i = 0;
+        var list = ["1st", "2nd", "3rd", "4th", "5th"];
         for (game of data){
-            leaderboard = leaderboard+li_s+game[0]+span_s+game[1]+end_li;
+            leaderboard = leaderboard+li_s+span_p+list[i]+end_s+game[0]+span_s+game[1]+" points"+end_li;
+            i++;
         }
-        var gameOver = gameOverFirst + leaderboard + gameOverSecond;
-        $('#alert').html(gameOver);
-        errorsound.play();
+        leaderboard = leaderboard + "</ul>";
+        console.log(data);
+        $("#highscores").html(leaderboard);
+        $('#popup').modal('show');
     })
 }
 
 function newQuestion() {
     $.ajax("/newquestion", {dataType:"json", method:"POST"}).done(function (data) {
-        ding.play();
+        console.log(data);
         var a_url = data['A'].image_url;
         var b_url = data['B'].image_url;
         valueA = data['A'].name;
@@ -100,10 +101,13 @@ function newQuestion() {
         $('#B').val(valueB);
         $('#nomeA').css({'font-size': ""});
         $('#nomeB').css({'font-size': ""});
+        $('#nomeA').css({'font-style': ""});
+        $('#nomeB').css({'font-style': ""});
         $('#buttonA').show()
         $('#buttonB').show()
         $('#cardA').css({'backgroundColor': 'LightGoldenRodYellow'});
         $('#cardB').css({'backgroundColor': 'LightGoldenRodYellow'});
+
     }).fail(function () {
         console.log("erro");
     });
