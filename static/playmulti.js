@@ -16,10 +16,12 @@ function post_answer(u, ans) {
             if (u === 1){
                 p1_enable = false;
                 $('#button_p1').attr("class", "btn btn-danger");
+                wait = false;
             }
             else if(u === 2){
                 p2_enable = false;
-                $('#button_p2').attr("class", "btn btn-outline-danger");
+                $('#button_p2').attr("class", "btn btn-danger");
+                wait = false;
             }
             if (!p1_enable && !p2_enable){
                 $('#button_p1').attr("class", "btn btn-danger");
@@ -27,7 +29,6 @@ function post_answer(u, ans) {
                 // alert("tudo mal");
                 newQuestion();
             }
-            wait = false;
         }
         else if (data['correct'] === true){
             if (u === 1){
@@ -38,14 +39,13 @@ function post_answer(u, ans) {
             else if(u === 2){
                 p2_score++;
                 $("#p2_score").html(p2_score);
-                $('#button_p2').attr("class", "btn btn-outline-success");
+                $('#button_p2').attr("class", "btn btn-success");
             }
             if(ans === nameA)
                 $('#cardA').css({'backgroundColor': 'LightGreen'});
             else
                 $('#cardB').css({'backgroundColor': 'LightGreen'});
             newQuestion();
-            wait = false;
         }
     });
 }
@@ -108,6 +108,7 @@ function newQuestion() {
         $('#cardB').css({'backgroundColor': 'LightGoldenRodYellow'});
         $('#button_p1').attr("class", "btn btn-outline-primary");
         $('#button_p2').attr("class", "btn btn-outline-warning");
+        wait = false;
     }).fail(function () {
         console.log("erro");
     });
