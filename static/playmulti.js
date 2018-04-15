@@ -41,11 +41,24 @@ function post_answer(u, ans) {
                 $("#p2_score").html(p2_score);
                 $('#button_p2').attr("class", "btn btn-success");
             }
+
             if(ans === nameA)
                 $('#cardA').css({'backgroundColor': 'LightGreen'});
             else
                 $('#cardB').css({'backgroundColor': 'LightGreen'});
-            newQuestion();
+            if(p1_score >= 10) {
+                $("#winner").html("Player 1 wins!");
+                $('#popup').modal('show');
+                window.removeEventListener("keypress", key_handle);
+            }
+            else if(p2_score >= 10) {
+                $("#winner").html("Player 2 wins!");
+                $('#popup').modal('show');
+                window.removeEventListener("keypress", key_handle);
+            }
+            else {
+                newQuestion();
+            }
         }
     });
 }
