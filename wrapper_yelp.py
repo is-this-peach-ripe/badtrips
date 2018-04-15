@@ -134,5 +134,5 @@ def getJson():
     locationDataFile.close()
 
 
-createNewQuestion(DEFAULT_LOCATION, 'h')
+#createNewQuestion(DEFAULT_LOCATION, 'h')
 # print(getReviews(BASE_URL, API_KEY, "yMUNfRmBfo_qvl-0p_kAwg"))

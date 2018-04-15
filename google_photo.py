@@ -15,8 +15,9 @@ def get_photo(name, coord):
     #print(r['results'])
     for b in r['results']:
         if b['name'] == name:
-            photo = random.choice(b['photos'])
-            break
+            if 'photos' in b:
+                photo = random.choice(b['photos'])
+                break
     if photo is None:
         print("No photos...")
         return ""

@@ -1,4 +1,4 @@
-from flask import Flask, session, request, jsonify, send_from_directory
+from flask import Flask, session, request, jsonify, send_from_directory, escape
 import os
 import json
 import redis
@@ -93,7 +93,7 @@ def lead():
     j = []
     for i  in l:
         print(i)
-        j.append([str(i[0]),i[1]])
+        j.append([escape(str(i[0], 'latin-1')),i[1]])
     print(j)
     return jsonify(j)
 

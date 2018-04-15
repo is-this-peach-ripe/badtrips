@@ -8,6 +8,10 @@ var gameOverFirst = '<div class=\"card border-danger mb-3 \" style=\"width: 18re
 
 var gameOverSecond = '</ul><a href="/"><button type=\"button\" class=\"btn btn-success\">Try Again! <i class=\"em em-wink\"></i></button></a>' +
     '</div></div>';
+
+var vomit = new Audio("/static/sounds/vomit.mp3");
+var errorsound = new Audio("/static/sounds/error.mp3");
+var ding = new Audio("/static/sounds/ding.mp3");
 newQuestion();
 
 function post_answer(bt) {
@@ -26,13 +30,13 @@ function post_answer(bt) {
             get_leaderboard();
         }
         else {
+            vomit.play();
             if(bt==='a')
                 $('#cardA').css({'backgroundColor': 'LightGreen'});
             else
                 $('#cardB').css({'backgroundColor': 'LightGreen'});
             score++;
             newQuestion();
-
         }
     });
 }
@@ -46,16 +50,15 @@ function get_leaderboard() {
         for (game of data){
             leaderboard = leaderboard+li_s+game[0]+span_s+game[1]+end_li;
         }
-
         var gameOver = gameOverFirst + leaderboard + gameOverSecond;
         $('#alert').html(gameOver);
-        console.log(data);
+        errorsound.play();
     })
 }
 
 function newQuestion() {
     $.ajax("/newquestion", {dataType:"json", method:"POST"}).done(function (data) {
-        console.log(data);
+        ding.play();
         var a_url = data['A'].image_url;
         var b_url = data['B'].image_url;
         valueA = data['A'].name;
@@ -69,7 +72,6 @@ function newQuestion() {
         $('#B').val(valueB);
         $('#cardA').css({'backgroundColor': 'LightGoldenRodYellow'});
         $('#cardB').css({'backgroundColor': 'LightGoldenRodYellow'});
-
     }).fail(function () {
         console.log("erro");
     });
