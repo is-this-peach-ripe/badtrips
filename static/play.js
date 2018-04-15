@@ -31,12 +31,40 @@ function post_answer(bt) {
         }
         else {
             vomit.play();
-            if(bt==='a')
+            if(bt==='a') {
                 $('#cardA').css({'backgroundColor': 'LightGreen'});
-            else
+                if(data['review'] != null) {
+                    $( "#nomeA" ).fadeIn( "slow", function() {
+                        var stars = ""
+                        var i;
+                        for(i = 0; i < data['review']['rating']; i++) {
+                            stars += "★";
+                        }[]
+                        $('#nomeA').css({'font-size': '2.5vh', 'font-style': 'italic'});
+                        $('#buttonA').hide()
+                        $('#nomeA').html(stars + "</br>\"" + data['review']['text'] + "\"</br>- " + data['review']['user']['name']); 
+                    });
+                }
+            }
+            else {
                 $('#cardB').css({'backgroundColor': 'LightGreen'});
+                if(data['review'] != null) {
+                    $( "#nomeB" ).fadeIn( "slow", function() {
+                        var stars = ""
+                        var i;
+                        for(i = 0; i < data['review']['rating']; i++) {
+                            stars += "★";
+                        }
+                        $('#nomeB').css({'font-size': '2.5vh', 'font-style': 'italic'});
+                        $('#buttonB').hide()
+                        $('#nomeB').html(stars + "</br>" + data['review']['text'] + "</br>- " + data['review']['user']['name']); 
+                    });
+                }
+            }
             score++;
-            newQuestion();
+            setTimeout(function(){
+                newQuestion();
+            }, 3000);
         }
     });
 }
@@ -70,6 +98,10 @@ function newQuestion() {
         $('#A').val(valueA);
         $('#nomeB').html(valueB);
         $('#B').val(valueB);
+        $('#nomeA').css({'font-size': ""});
+        $('#nomeB').css({'font-size': ""});
+        $('#buttonA').show()
+        $('#buttonB').show()
         $('#cardA').css({'backgroundColor': 'LightGoldenRodYellow'});
         $('#cardB').css({'backgroundColor': 'LightGoldenRodYellow'});
     }).fail(function () {
