@@ -7,35 +7,99 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-    <title>badtrips</title>
+    <title>BadTrips</title>
 </head>
 <body>
-<form id="start" action="/play" method="post">
-    <input type="submit" value="Play!" class="btn btn-primary" style="display: block; margin: auto">
-    <br>
-    <input name="username" type="text" style="display: block; margin: auto">
-    <br>
-    <label>
-        <select name="location" form="start" style="display: block; margin: auto">
-            <option value="porto">Porto</option>
-            <option value="lisboa">Lisboa</option>
-            <option value="paris">Paris</option>
-            <option value="london">London</option>
-        </select>
-    </label>
-</form>
-<form id="startmulti" action="/playmulti" method="post">
-    <input name="p1" type="text" style="display: block; margin: auto">
-    <input name="p2" type="text" style="display: block; margin: auto">
-    <label>
-        <select name="location" form="startmulti"  style="display: block; margin: auto">
-            <option value="porto">Porto</option>
-            <option value="lisboa">Lisboa</option>
-            <option value="paris">Paris</option>
-            <option value="london">London</option>
-        </select>
-    </label>
-    <input type="submit" class="btn btn-primary" value="Play 2 Players!" style="display: block; margin: auto">
-</form>
+
+<div id="top" style="size: 5vh; margin-top: 15vh; margin-bottom: 5vh">
+
+    <center><h1> BadTrips </h1></center>
+</div>
+
+<div id="center" style="size: 50vh; margin-top: 5vh ">
+    <div id="center-top" style="size: 30vh; margin-top: 5vh">
+        <p>
+           <center>
+            BadTrips <i class="em em-face_with_rolling_eyes"></i><i class="em em-cry"></i> <i class="em em-airplane"></i>, is a game<i class="em em-video_game"></i> that let's you know all the coolest places:  <i class="em em-camera"></i><i class="em em-tokyo_tower"></i><i class="em em-fork_and_knife"></i> in a city you choose.
+            <br/>
+            <br/>
+            BadTrips provides you the simplest way to avoid all <i class="em em--1"></i> places in town.
+           </center>
+        </p>
+    </div>
+    <div  class="row" id="center-mid" style="size: 60vh; margin-top:20vh ">
+        <div class="col-xs-5 col-sm-5 col-lg-5" id="center-mid-left">
+
+
+            <form id="start" action="/play" method="post">
+                <center><h2><i class="em em-grinning_face_with_star_eyes"></i></h2></center>
+
+                <!--<label>
+                    <select name="location" form="start" style="display: block; margin: auto">
+                        <option value="porto">Porto</option>
+                        <option value="lisboa">Lisboa</option>
+                        <option value="paris">Paris</option>
+                        <option value="london">London</option>
+                    </select>
+                </label>-->
+               <center><div class="input-group mb-2 mr-sm-2" style="width: 13vw;">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">@</div>
+                    </div>
+
+                    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+                </div></center>
+
+                <input  type="submit" value="Solo Play!" class="btn btn-primary" style="display: block; margin: auto;">
+
+            </form>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-lg-2" id="center-mid-mid">
+            <center><h5>Select the city</h5></center>
+           <select class="custom-select" name="location" form="start" style="display: block; margin: auto">
+                <option value="porto">Porto</option>
+                <option value="lisboa">Lisboa</option>
+           </select>
+        </div>
+        <div class="col-xs-5 col-sm-5 col-lg-5" id="center-mid-right" >
+            <center><h2> <i class="em em-face_with_cowboy_hat"></i> vs <i class="em em-face_with_cowboy_hat"></i></h2></center>
+            <form id="startmulti" action="/playmulti" method="post">
+                <!--
+
+                <input name="p1" type="text" style="display: block; margin: auto">
+                <input name="p2" type="text" style="display: block; margin: auto">
+
+                -->
+                <!--
+
+                <label>
+                    <select name="location" form="startmulti"  style="display: block; margin: auto">
+                        <option value="porto">Porto</option>
+                        <option value="lisboa">Lisboa</option>
+                        <option value="paris">Paris</option>
+                        <option value="london">London</option>
+                    </select>
+                </label>
+
+                -->
+                <br/>
+                <br/>
+                <input type="submit" class="btn btn-primary" value="Play Multiplayer!" style="display: block; margin: auto">
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div id="footer"style="size: 20vh">
+
+</div>
+
 </body>
 </html>
