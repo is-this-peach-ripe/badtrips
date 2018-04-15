@@ -64,6 +64,7 @@ def newQuestion():
         question['B']['image_url'] = google_photo.get_photo(question['B']['name'],
                                                             (question['B']['coordinates.latitude'], question['B']['coordinates.longitude']))
     store_answer(answer, session['id'], game)
+    store_review(worst_rev, session['id'], game)
     return jsonify(question)
 
 
@@ -77,14 +78,14 @@ def answer():
     game = getGame(session['id'])
     if game['state'] != "playing":
         return jsonify({"state":"no no no no"})
-    response, correct_answer = check_answer(answer, session['id'], game)
+    response, correct_answer, review = check_answer(answer, session['id'], game)
     app.logger.debug("New answer from " + str(session['id']) +"\nGame object: " + str(game) + "\nAnswer: " + answer)
     if response:
-        return jsonify({"correct": True, "answer": correct_answer})
+        return jsonify({"correct": True, "answer": correct_answer, "review": review})
     else:
         app.logger.debug("GAME OVER")
         register_gameover(session['id'], game)
-        return jsonify({"correct": False, "answer": correct_answer})
+        return jsonify({"correct": False, "answer": correct_answer, "review": review})
 
 
 @app.route('/leaderboard',methods=['POST'])
@@ -105,8 +106,8 @@ def answermulti():
     game = getGame(session['id'])
     if game['state'] != "playing":
         return jsonify({"state":"no no no no"})
-    response, correct_answer = check_answer_multi(answer, user, session['id'], game)
-    return jsonify({"correct": response, "answer": correct_answer})
+    response, correct_answer, review = check_answer_multi(answer, user, session['id'], game)
+    return jsonify({"correct": response, "answer": correct_answer, "review": review})
 
 
 @app.route('/playmulti', methods=['POST'])
@@ -157,6 +158,18 @@ def store_answer(answer, id, game):
     r.set(id, json.dumps(game))
 
 
+def store_review(review, id, game):
+    '''
+    store a review for a game
+    :param review:
+    :param game:
+    :param id:
+    :return:
+    '''
+    game["review"] = review
+    r.set(id, json.dumps(game))	
+
+
 def leaderboard():
     l = r.zrevrange("scores", 0, 10, withscores=True)
     print(l)
@@ -190,8 +203,8 @@ def check_answer_multi(answer, user, id, game):
         elif user == 2:
             game['p2_score'] += 1
         r.set(id, json.dumps(game))
-        return True, game['answer']
-    return False, game['answer']
+        return True, game['answer'], game['review']
+    return False, game['answer'], game['review']
 
 
 def check_answer(answer, id, game):
@@ -205,8 +218,8 @@ def check_answer(answer, id, game):
     if game["answer"] == answer:
         game["score"] += 1
         r.set(id, json.dumps(game))
-        return True, game["answer"]
-    return False, game["answer"]
+        return True, game["answer"], game['review']
+    return False, game["answer"], game['review']
 
 
 def newMultiGame(location, p1, p2):

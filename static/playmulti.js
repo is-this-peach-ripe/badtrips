@@ -46,12 +46,12 @@ function post_answer(u, ans) {
             if(p1_score >= 10) {
                 $("#winner").html("Player 1 wins!");
                 $('#popup').modal('show');
-                window.removeEventListener("keypress", key_handle);
+                window.removeEventListener("keydown", key_handle);
             }
             else if(p2_score >= 10) {
                 $("#winner").html("Player 2 wins!");
                 $('#popup').modal('show');
-                window.removeEventListener("keypress", key_handle);
+                window.removeEventListener("keydown", key_handle);
             }
             else {
                 newQuestion();
