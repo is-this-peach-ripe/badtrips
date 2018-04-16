@@ -4,7 +4,7 @@ from pandas.io.json import json_normalize
 import json
 import random
 
-DEFAULT_LOCATION = 'Porto, PT'
+DEFAULT_LOCATION = 'Aveiro'
 SEARCH_LIMIT = 50
 OFFSETS = 20
 CLIENT_ID = "UEpOw_GR3E0vb7-CxYCPlA"
@@ -19,75 +19,80 @@ data_Porto = json.load(open("Porto.json"))
 df_Porto = json_normalize(data_Porto["businesses"])
 data_Lisboa = json.load(open("Lisbon.json"))
 df_Lisboa = json_normalize(data_Lisboa["businesses"])
+data_Aveiro = json.load(open("Aveiro.json"))
+df_Aveiro = json_normalize(data_Aveiro["businesses"])
+
 
 
 def createNewQuestion(location, difficulty=None):
     if(location == 'lisboa'):
         df = df_Lisboa
+    elif(location == 'aveiro'):
+        df = df_Aveiro
     else:
         df = df_Porto
-
-    a = df.sample(n=1, axis=0)
-    rating_a = a['rating'].values[0]
-    if difficulty is not None:
-        # TODO: don't send with the same rating!
-        rand = random.choice([0, 1])
-        if difficulty is 'e':
-            rating_b = random.sample(set([float(rating_a - 1.5), float(rating_a + 1.5)]), 2)[rand]
-            rating_b = 1.0 if rating_b < 1.0 else 5.0 if rating_b > 5.0 else rating_b
-            if rating_a == rating_b:
-                if rating_b == 5.0:
-                    rating_b = rating_b - 1.5
-                elif rating_b == 1.0:
-                    rating_b = rating_b + 1.5
-        elif difficulty is 'm':
-            rating_b = random.sample(set([float(rating_a - 1), float(rating_a + 1)]), 2)[rand]
-            rating_b = 1.0 if rating_b < 1.0 else 5.0 if rating_b > 5.0 else rating_b
-            if rating_a == rating_b:
-                if rating_b == 5.0:
-                    rating_b = rating_b - 1.0
-                elif rating_b == 1.0:
-                    rating_b = rating_b + 1.0
-        elif difficulty is 'h':
-            rating_b = random.sample(set([float(rating_a - 0.5), float(rating_a + 0.5)]), 2)[rand]
-            rating_b = 1.0 if rating_b < 1.0 else 5.0 if rating_b > 5.0 else rating_b
-            if rating_a == rating_b:
-                if rating_b == 5.0:
-                    rating_b = rating_b - 0.5
-                elif rating_b == 1.0:
-                    rating_b = rating_b + 0.5
-        question_ratings = [rating_a, rating_b]
-        question = {
-            "A": json.loads(a.drop(['rating'], axis=1).sample(n=1, axis=0).to_json(orient='records'))[0],
-            "B": json.loads(df.loc[df['rating'] == rating_b].drop(['rating'], axis=1).sample(n=1, axis=0).to_json(
-                orient='records'))[0],
-        }
-
-        if (question_ratings.index(min(question_ratings)) == 0):
-            answer = question['A']['name']
-            worst_review = getWorstReview(question['A']['id'])
-        else:
-            answer = question['B']['name']
-            worst_review = getWorstReview(question['B']['id'])
-
-    else:
-
-        question_ratings = random.sample(set(ratings), 2)
-        question = {
-            "A": json.loads(
-                df.loc[df['rating'] == question_ratings[0]].drop(['rating'], axis=1).sample(n=1, axis=0).to_json(
+    try:
+        a = df.sample(n=1, axis=0)
+        rating_a = a['rating'].values[0]
+        if difficulty is not None:
+            rand = random.choice([0, 1])
+            if difficulty is 'e':
+                rating_b = random.sample(set([float(rating_a - 1.5), float(rating_a + 1.5)]), 2)[rand]
+                rating_b = 1.0 if rating_b < 1.0 else 5.0 if rating_b > 5.0 else rating_b
+                if rating_a == rating_b:
+                    if rating_b == 5.0:
+                        rating_b = rating_b - 1.5
+                    elif rating_b == 1.0:
+                        rating_b = rating_b + 1.5
+            elif difficulty is 'm':
+                rating_b = random.sample(set([float(rating_a - 1), float(rating_a + 1)]), 2)[rand]
+                rating_b = 1.0 if rating_b < 1.0 else 5.0 if rating_b > 5.0 else rating_b
+                if rating_a == rating_b:
+                    if rating_b == 5.0:
+                        rating_b = rating_b - 1.0
+                    elif rating_b == 1.0:
+                        rating_b = rating_b + 1.0
+            elif difficulty is 'h':
+                rating_b = random.sample(set([float(rating_a - 0.5), float(rating_a + 0.5)]), 2)[rand]
+                rating_b = 1.0 if rating_b < 1.0 else 5.0 if rating_b > 5.0 else rating_b
+                if rating_a == rating_b:
+                    if rating_b == 5.0:
+                        rating_b = rating_b - 0.5
+                    elif rating_b == 1.0:
+                        rating_b = rating_b + 0.5
+            question_ratings = [rating_a, rating_b]
+            question = {
+                "A": json.loads(a.drop(['rating'], axis=1).sample(n=1, axis=0).to_json(orient='records'))[0],
+                "B": json.loads(df.loc[df['rating'] == rating_b].drop(['rating'], axis=1).sample(n=1, axis=0).to_json(
                     orient='records'))[0],
-            "B": json.loads(
-                df.loc[df['rating'] == question_ratings[1]].drop(['rating'], axis=1).sample(n=1, axis=0).to_json(
-                    orient='records'))[0],
-        }
-        if (question_ratings.index(min(question_ratings)) == 0):
-            answer = question['A']['name']
-            worst_review = getWorstReview(question['A']['id'])
-        else:
-            answer = question['B']['name']
-            worst_review = getWorstReview(question['B']['id'])
+            }
 
+            if (question_ratings.index(min(question_ratings)) == 0):
+                answer = question['A']['name']
+                worst_review = getWorstReview(question['A']['id'])
+            else:
+                answer = question['B']['name']
+                worst_review = getWorstReview(question['B']['id'])
+
+        else:
+
+            question_ratings = random.sample(set(ratings), 2)
+            question = {
+                "A": json.loads(
+                    df.loc[df['rating'] == question_ratings[0]].drop(['rating'], axis=1).sample(n=1, axis=0).to_json(
+                        orient='records'))[0],
+                "B": json.loads(
+                    df.loc[df['rating'] == question_ratings[1]].drop(['rating'], axis=1).sample(n=1, axis=0).to_json(
+                        orient='records'))[0],
+            }
+            if (question_ratings.index(min(question_ratings)) == 0):
+                answer = question['A']['name']
+                worst_review = getWorstReview(question['A']['id'])
+            else:
+                answer = question['B']['name']
+                worst_review = getWorstReview(question['B']['id'])
+    except:
+        return createNewQuestion(location)
     return question, answer, worst_review
 
 
@@ -139,10 +144,11 @@ def getJson():
         response = request(URL, API_KEY, DEFAULT_LOCATION, i * 50)
         print(response)
         out['businesses'].extend(response['businesses'])
-    locationDataFile = open('Lisbon.json', 'w')
+    locationDataFile = open('Aveiro.json', 'w')
     locationDataFile.write(json.dumps(out, indent=4, sort_keys=True))
     locationDataFile.close()
 
 
 #createNewQuestion(DEFAULT_LOCATION, 'h')
 # print(getReviews(BASE_URL, API_KEY, "yMUNfRmBfo_qvl-0p_kAwg"))
+getJson()

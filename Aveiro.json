@@ -1,0 +1,1760 @@
+{
+    "businesses": [
+        {
+            "alias": "subenshi-aveiro",
+            "categories": [
+                {
+                    "alias": "sushi",
+                    "title": "Sushi Bars"
+                },
+                {
+                    "alias": "japanese",
+                    "title": "Japanese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.639993,
+                "longitude": -8.647417
+            },
+            "display_phone": "+351 938 032 398",
+            "distance": 240.34924739255567,
+            "id": "CefeTwzkpWzIGpJoCWGc9Q",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/WQJl2c5YiDEm5h0zpNMNzQ/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. Carlos Aleluia, 29",
+                "address2": "Loja 16",
+                "address3": "Edificio Aveiro Centum",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. Carlos Aleluia, 29",
+                    "Loja 16",
+                    "Edificio Aveiro Centum",
+                    "3810-082 Aveiro",
+                    "Portugal"
+                ],
+                "state": "20",
+                "zip_code": "3810-082"
+            },
+            "name": "Subenshi",
+            "phone": "+351938032398",
+            "price": "\u20ac\u20ac",
+            "rating": 5.0,
+            "review_count": 4,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/subenshi-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "churrasqueira-mercado-aveiro",
+            "categories": [
+                {
+                    "alias": "restaurants",
+                    "title": "Restaurants"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6420517,
+                "longitude": -8.6480007
+            },
+            "display_phone": "+351 234 381 865",
+            "distance": 454.2751870566017,
+            "id": "7zfKRm_rVdmui08Do3Y1tA",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/GwdLgaMBRRAVFPpUO4qESA/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "L. do Mercado, 89",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "L. do Mercado, 89",
+                    "3800-223 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-223"
+            },
+            "name": "Churrasqueira Mercado",
+            "phone": "+351234381865",
+            "price": "\u20ac\u20ac",
+            "rating": 2.0,
+            "review_count": 2,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/churrasqueira-mercado-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "luxor-lounge-aveiro",
+            "categories": [
+                {
+                    "alias": "arts",
+                    "title": "Arts & Entertainment"
+                },
+                {
+                    "alias": "lounges",
+                    "title": "Lounges"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6350512410789,
+                "longitude": -8.64635489881039
+            },
+            "display_phone": "",
+            "distance": 498.65295647358613,
+            "id": "uOML4xxBQKYUavva6DgBnQ",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/79QFL_k24EeQAFxgzq2-MQ/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Rua S\u00e3o Martinho, 13",
+                "address2": "",
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Rua S\u00e3o Martinho, 13",
+                    "3810-184 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3810-184"
+            },
+            "name": "Luxor Lounge",
+            "phone": "",
+            "price": "\u20ac\u20ac",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/luxor-lounge-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "pizzarte-aveiro-2",
+            "categories": [
+                {
+                    "alias": "salad",
+                    "title": "Salad"
+                },
+                {
+                    "alias": "italian",
+                    "title": "Italian"
+                },
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6440928910518,
+                "longitude": -8.64528203057815
+            },
+            "display_phone": "+351 234 427 103",
+            "distance": 529.1201856165266,
+            "id": "nV0vWAYpxsKzmW-wsz5j5Q",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/8CZvebylQ4YRwzXBFK_YNA/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. Engenheiro Von Haff, 27",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. Engenheiro Von Haff, 27",
+                    "3800-177 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-177"
+            },
+            "name": "Pizzarte",
+            "phone": "+351234427103",
+            "price": "\u20ac\u20ac",
+            "rating": 4.0,
+            "review_count": 3,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/pizzarte-aveiro-2?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "pizzarte-aveiro",
+            "categories": [
+                {
+                    "alias": "restaurants",
+                    "title": "Restaurants"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6440928910518,
+                "longitude": -8.64528203057815
+            },
+            "display_phone": "+351 234 382 511",
+            "distance": 529.1201856165266,
+            "id": "cbwEtEFPYfqi6BPSbTeqwg",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/xgsm5jHzVgfv-9tdY3-ubg/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. Engenheiro Von Hafe, 27 R/C",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. Engenheiro Von Hafe, 27 R/C",
+                    "3800-177 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-177"
+            },
+            "name": "Pizzarte",
+            "phone": "+351234382511",
+            "price": "\u20ac\u20ac",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/pizzarte-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "indiano-aveiro",
+            "categories": [
+                {
+                    "alias": "indpak",
+                    "title": "Indian"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6318893,
+                "longitude": -8.5992298
+            },
+            "display_phone": "+351 234 422 616",
+            "distance": 563.6717760149867,
+            "id": "Aa1yMHsxbY93fpy6zDWCrQ",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/h0Rqmz_Ljf5ZNi5mmVlygg/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Rua de E\u00e7a de Queir\u00f3s 6",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Rua de E\u00e7a de Queir\u00f3s 6",
+                    "3810-109 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3810-109"
+            },
+            "name": "Indiano",
+            "phone": "+351234422616",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/indiano-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "caf\u00e9-ramona-aveiro",
+            "categories": [
+                {
+                    "alias": "burgers",
+                    "title": "Burgers"
+                },
+                {
+                    "alias": "hotdogs",
+                    "title": "Fast Food"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6381203087127,
+                "longitude": -8.65119383091002
+            },
+            "display_phone": "+351 234 427 506",
+            "distance": 565.2684547705735,
+            "id": "jPqOokG6YUV3uFXZxgUbkw",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/dLoK2skMsqmONuf9BhagXw/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. E\u00e7a de Queiroz, 12",
+                "address2": "",
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. E\u00e7a de Queiroz, 12",
+                    "3810-109 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3810-109"
+            },
+            "name": "Caf\u00e9 Ramona",
+            "phone": "+351234427506",
+            "price": "\u20ac",
+            "rating": 4.5,
+            "review_count": 5,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/caf%C3%A9-ramona-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "entre-copos-e-ch\u00e1venas-aveiro",
+            "categories": [
+                {
+                    "alias": "tapasmallplates",
+                    "title": "Tapas/Small Plates"
+                },
+                {
+                    "alias": "sandwiches",
+                    "title": "Sandwiches"
+                },
+                {
+                    "alias": "breakfast_brunch",
+                    "title": "Breakfast & Brunch"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.63893,
+                "longitude": -8.65242
+            },
+            "display_phone": "+351 234 020 313",
+            "distance": 712.4853734434051,
+            "id": "dhM6Ofg0Zw3ccsWGbJzB8g",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/G4tOyd5l7lYBL4nN9HXWeg/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Rua dos Combatentes da Grande Guerra, 32",
+                "address2": "",
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Rua dos Combatentes da Grande Guerra, 32",
+                    "3810-087 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3810-087"
+            },
+            "name": "Entre Copos e Ch\u00e1venas",
+            "phone": "+351234020313",
+            "rating": 5.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/entre-copos-e-ch%C3%A1venas-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "the-iron-duke-pub-aveiro",
+            "categories": [
+                {
+                    "alias": "pubs",
+                    "title": "Pubs"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.63967,
+                "longitude": -8.6532916
+            },
+            "display_phone": "+351 234 133 922",
+            "distance": 726.1761733455331,
+            "id": "L4jkSRdmpyGMJaKrRF_ZrQ",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/wkOdfZuCn92Jgz06SCNoQQ/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Travessa da Rua Direita, 6",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Travessa da Rua Direita, 6",
+                    "3810-519 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3810-519"
+            },
+            "name": "The Iron Duke Pub",
+            "phone": "+351234133922",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/the-iron-duke-pub-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "restaurante-zico-aveiro",
+            "categories": [
+                {
+                    "alias": "seafood",
+                    "title": "Seafood"
+                },
+                {
+                    "alias": "steak",
+                    "title": "Steakhouses"
+                },
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.642647,
+                "longitude": -8.652843
+            },
+            "display_phone": "+351 234 429 649",
+            "distance": 778.8337531172439,
+            "id": "vk7dELS4XSCCl2Gheqx4HA",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/JSoQpEu5rBndTRdFWjDGsQ/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. Jos\u00e9 Estev\u00e3o, 52",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. Jos\u00e9 Estev\u00e3o, 52",
+                    "3800-202 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-202"
+            },
+            "name": "Restaurante Zico",
+            "phone": "+351234429649",
+            "rating": 5.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/restaurante-zico-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "aveiro-hafenstadt-in-nordportugal-aveiro",
+            "categories": [
+                {
+                    "alias": "hotelstravel",
+                    "title": "Hotels & Travel"
+                },
+                {
+                    "alias": "landmarks",
+                    "title": "Landmarks & Historical Buildings"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6412,
+                "longitude": -8.65362
+            },
+            "display_phone": "",
+            "distance": 780.4710842482177,
+            "id": "-02b3oAY1Yn954dStgVnng",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/8ADi7_jUAABOJhOEc7s6Ww/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": null,
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": ""
+            },
+            "name": "Aveiro Hafenstadt in Nordportugal",
+            "phone": "",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/aveiro-hafenstadt-in-nordportugal-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "parque-infante-d-pedro-aveiro",
+            "categories": [
+                {
+                    "alias": "parks",
+                    "title": "Parks"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6364126421367,
+                "longitude": -8.65315928888549
+            },
+            "display_phone": "",
+            "distance": 785.5725541010894,
+            "id": "eV1RmzPHxGtWpMFAYIpD_w",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/YvxwktCF92c1rWIOWovbFw/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Av. de Artur Ravara",
+                "address2": "",
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Av. de Artur Ravara",
+                    "3810-096 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3810-096"
+            },
+            "name": "Parque Infante D. Pedro",
+            "phone": "",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/parque-infante-d-pedro-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "snack-bar-picota-aveiro",
+            "categories": [
+                {
+                    "alias": "modern_european",
+                    "title": "Modern European"
+                },
+                {
+                    "alias": "mediterranean",
+                    "title": "Mediterranean"
+                },
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.643434,
+                "longitude": -8.652791
+            },
+            "display_phone": "+351 234 421 538",
+            "distance": 819.928628322739,
+            "id": "Eel-Ew5uLT3vVIIq6VgudQ",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/TOzJ5bripWy_1b3tnguohw/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. Dr. Ant\u00f3nio Christo, 21-3",
+                "address2": "",
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. Dr. Ant\u00f3nio Christo, 21-3",
+                    "3800-152 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-152"
+            },
+            "name": "Snack Bar Picota",
+            "phone": "+351234421538",
+            "rating": 3.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/snack-bar-picota-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "tasquinha-do-leit\u00e3o-aveiro",
+            "categories": [
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6423522910054,
+                "longitude": -8.65362363254087
+            },
+            "display_phone": "+351 234 421 073",
+            "distance": 823.7528370052291,
+            "id": "9H7S568uTfETgjTzpsDpbw",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/t3SipabY_Z6Bnb6E6tBwRA/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Pra\u00e7a 14 de Julho, 4",
+                "address2": "",
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Pra\u00e7a 14 de Julho, 4",
+                    "3800-131 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-131"
+            },
+            "name": "Tasquinha do Leit\u00e3o",
+            "phone": "+351234421073",
+            "price": "\u20ac\u20ac",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/tasquinha-do-leit%C3%A3o-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "doce-infus\u00e3o-aveiro",
+            "categories": [
+                {
+                    "alias": "tea",
+                    "title": "Tea Rooms"
+                },
+                {
+                    "alias": "sandwiches",
+                    "title": "Sandwiches"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6426669241767,
+                "longitude": -8.65353889025369
+            },
+            "display_phone": "+351 234 345 414",
+            "distance": 832.0976128416562,
+            "id": "dNgP5bZpcx1SXCSWapy0PA",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/7QoqWKaIutR4rslzPvYeLg/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Largo da Apresenta\u00e7\u00e3o, 3",
+                "address2": null,
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Largo da Apresenta\u00e7\u00e3o, 3",
+                    "9800-259 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "9800-259"
+            },
+            "name": "Doce Infus\u00e3o",
+            "phone": "+351234345414",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/doce-infus%C3%A3o-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "adega-evaristo-aveiro",
+            "categories": [
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.639796,
+                "longitude": -8.654619
+            },
+            "display_phone": "+351 234 424 780",
+            "distance": 838.7666698578881,
+            "id": "QLLOpirjFPYOUdTox9VlSA",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/kJ04SvYAU8DX6hpoD-PEtw/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. 31 de Janeiro, 14",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. 31 de Janeiro, 14",
+                    "3810-192 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3810-192"
+            },
+            "name": "Adega Evaristo",
+            "phone": "+351234424780",
+            "price": "\u20ac",
+            "rating": 5.0,
+            "review_count": 5,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/adega-evaristo-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "restaurante-o-garfo-aveiro",
+            "categories": [
+                {
+                    "alias": "restaurants",
+                    "title": "Restaurants"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6459885,
+                "longitude": -8.64503
+            },
+            "display_phone": "+351 234 425 231",
+            "distance": 844.2168941141593,
+            "id": "wzqSo_faYY1W2gHuqzMB1A",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/iZ47fOeULApmLL3pELoaMw/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. de S\u00e1, 40",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. de S\u00e1, 40",
+                    "3800-248 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-248"
+            },
+            "name": "Restaurante o Garfo",
+            "phone": "+351234425231",
+            "price": "\u20ac",
+            "rating": 4.5,
+            "review_count": 2,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/restaurante-o-garfo-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "restaurente-residencial-ferro-aveiro",
+            "categories": [
+                {
+                    "alias": "restaurants",
+                    "title": "Restaurants"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6423759,
+                "longitude": -8.6542587
+            },
+            "display_phone": "",
+            "distance": 881.2794248911157,
+            "id": "ujuh_gpY8UQA-7Dn4Fh55g",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/iVcFJHD59a5mvYVyoW3LXQ/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. Tenente Rezende, 30",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. Tenente Rezende, 30",
+                    "3800-269 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-269"
+            },
+            "name": "Restaurente/Residencial Ferro",
+            "phone": "",
+            "rating": 2.5,
+            "review_count": 2,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/restaurente-residencial-ferro-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "o-batel-aveiro",
+            "categories": [
+                {
+                    "alias": "seafood",
+                    "title": "Seafood"
+                },
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                },
+                {
+                    "alias": "beerbar",
+                    "title": "Beer Bar"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.641963,
+                "longitude": -8.654568
+            },
+            "display_phone": "+351 234 484 234",
+            "distance": 882.0418239660366,
+            "id": "3-nBWEOVpCiU2dC_sxezqg",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/YQf3dRncc0SaWAJBxbcyfA/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Travessa do Tenente Rezende, 21",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Travessa do Tenente Rezende, 21",
+                    "3800-105 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-105"
+            },
+            "name": "O Batel",
+            "phone": "+351234484234",
+            "price": "\u20ac\u20ac",
+            "rating": 4.0,
+            "review_count": 2,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/o-batel-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "mercado-negro-aveiro",
+            "categories": [
+                {
+                    "alias": "cafes",
+                    "title": "Cafes"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6416301117212,
+                "longitude": -8.65472851184909
+            },
+            "display_phone": "",
+            "distance": 883.5451546191215,
+            "id": "IVmcvbYTmd7CtBu9ePIeFA",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/NZPiTZoXiPXd0WkbG7GnuQ/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Rua do Clube dos Galitos, 9",
+                "address2": "",
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Rua do Clube dos Galitos, 9",
+                    "Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": ""
+            },
+            "name": "Mercado negro",
+            "phone": "",
+            "rating": 5.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/mercado-negro-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "a-tasca-do-confrade-aveiro",
+            "categories": [
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6426086,
+                "longitude": -8.6543798
+            },
+            "display_phone": "+351 234 386 381",
+            "distance": 894.294656155076,
+            "id": "J5tFL05qepgcmJvULio6nw",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/tzjh4Igi1yMVun4rQNk6kw/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Rua dos Marnotos, 34",
+                "address2": "",
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Rua dos Marnotos, 34",
+                    "3800-220 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-220"
+            },
+            "name": "A Tasca do Confrade",
+            "phone": "+351234386381",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/a-tasca-do-confrade-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "porta-35-aveiro",
+            "categories": [
+                {
+                    "alias": "burgers",
+                    "title": "Burgers"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6422311409494,
+                "longitude": -8.65466608282077
+            },
+            "display_phone": "+351 911 532 016",
+            "distance": 900.0174321496725,
+            "id": "4rENlLIag-8V8M_VeHKNGg",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/F7oRGStFKhohjrO1wc_fSg/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. do Tenente Rezende, 35",
+                "address2": "",
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. do Tenente Rezende, 35",
+                    "3800 269 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800 269"
+            },
+            "name": "Porta 35",
+            "phone": "+351911532016",
+            "price": "\u20ac\u20ac",
+            "rating": 3.0,
+            "review_count": 2,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/porta-35-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "restaurante-marisqueira-mare-cheia-aveiro",
+            "categories": [
+                {
+                    "alias": "seafood",
+                    "title": "Seafood"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6408,
+                "longitude": -8.65556
+            },
+            "display_phone": "+351 234 384 030",
+            "distance": 930.6950478458946,
+            "id": "4xeko_PnjQRLaPiizHnupw",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/8t_5diurjLtrg3zqgvY5XQ/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. Jos\u00e9 Rabumba 10  10",
+                "address2": "Fisch und Meeresfr\u00fcchte",
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. Jos\u00e9 Rabumba 10  10",
+                    "Fisch und Meeresfr\u00fcchte",
+                    "Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": ""
+            },
+            "name": "Restaurante Marisqueira Mare Cheia",
+            "phone": "+351234384030",
+            "rating": 4.5,
+            "review_count": 6,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/restaurante-marisqueira-mare-cheia-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "kittens-aveiro",
+            "categories": [
+                {
+                    "alias": "irish",
+                    "title": "Irish"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.64184,
+                "longitude": -8.65519
+            },
+            "display_phone": "+351 965 476 181",
+            "distance": 933.416477630847,
+            "id": "6ixd-zVkxfWV-99eSD4K4w",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/kRymOYeZdd2ShUzSNRdGtg/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Rua Trindade Coelho",
+                "address2": "",
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Rua Trindade Coelho",
+                    "Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": ""
+            },
+            "name": "Kitten's",
+            "phone": "+351965476181",
+            "price": "\u20ac\u20ac",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/kittens-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "mercado-do-peixe-aveiro",
+            "categories": [
+                {
+                    "alias": "seafood",
+                    "title": "Seafood"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6420545,
+                "longitude": -8.6552
+            },
+            "display_phone": "+351 234 241 928",
+            "distance": 935.7810590274968,
+            "id": "UyG6Rbrg2XYzGZz9ChinYw",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/JCS0fHF8KHksekjueoj8Qw/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Largo da Pra\u00e7a do Peixe, 1",
+                "address2": "",
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Largo da Pra\u00e7a do Peixe, 1",
+                    "3800-243 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-243"
+            },
+            "name": "Mercado do Peixe",
+            "phone": "+351234241928",
+            "rating": 5.0,
+            "review_count": 2,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/mercado-do-peixe-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "porta-36-aveiro",
+            "categories": [
+                {
+                    "alias": "seafood",
+                    "title": "Seafood"
+                },
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6424,
+                "longitude": -8.6550499
+            },
+            "display_phone": "+351 935 295 562",
+            "distance": 936.3789803066772,
+            "id": "cfuGRq8zimIelrzSh9DAKg",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/F5VpXMOmAfyrlKFiXBb_1w/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Largo da Pra\u00e7a do Peixe, 36",
+                "address2": "",
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Largo da Pra\u00e7a do Peixe, 36",
+                    "3800-243 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-243"
+            },
+            "name": "Porta 36",
+            "phone": "+351935295562",
+            "price": "\u20ac\u20ac",
+            "rating": 3.0,
+            "review_count": 3,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/porta-36-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "o-telheiro-aveiro",
+            "categories": [
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6424904,
+                "longitude": -8.6556702
+            },
+            "display_phone": "+351 234 429 473",
+            "distance": 990.9260549617635,
+            "id": "1PYgD3ifwlCNa9vNssk8cw",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/5Goaw2HKHdEeeeXscVsQoA/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Largo da Pra\u00e7a do Peixe, 20",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Largo da Pra\u00e7a do Peixe, 20",
+                    "3800-243 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-243"
+            },
+            "name": "O Telheiro",
+            "phone": "+351234429473",
+            "rating": 3.0,
+            "review_count": 3,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/o-telheiro-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "o-bairro-aveiro",
+            "categories": [
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6426069355139,
+                "longitude": -8.65585394203663
+            },
+            "display_phone": "+351 234 338 567",
+            "distance": 1008.5542553410024,
+            "id": "Tz6RBcOcQvd7m0iZ4L5ODw",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/4_BfJsHSGddeFUAVzVxjng/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Largo da Pra\u00e7a do Peixe, 24",
+                "address2": "",
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Largo da Pra\u00e7a do Peixe, 24",
+                    "3800-243 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-243"
+            },
+            "name": "O Bairro",
+            "phone": "+351234338567",
+            "price": "\u20ac\u20ac\u20ac",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/o-bairro-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "o-augusto-aveiro",
+            "categories": [
+                {
+                    "alias": "seafood",
+                    "title": "Seafood"
+                },
+                {
+                    "alias": "beerbar",
+                    "title": "Beer Bar"
+                },
+                {
+                    "alias": "sandwiches",
+                    "title": "Sandwiches"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.642381,
+                "longitude": -8.656157
+            },
+            "display_phone": "+351 234 424 576",
+            "distance": 1023.9398255174742,
+            "id": "KF0Olkbqq73gmJjd00jdJQ",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Qwwo1geEs_aAbq9PqYRvow/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Largo do Rossio, 8",
+                "address2": "",
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Largo do Rossio, 8",
+                    "3800-246 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-246"
+            },
+            "name": "O Augusto",
+            "phone": "+351234424576",
+            "rating": 3.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/o-augusto-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "cais-madeirense-aveiro",
+            "categories": [
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                },
+                {
+                    "alias": "cafes",
+                    "title": "Cafes"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6433039966985,
+                "longitude": -8.6557550355792
+            },
+            "display_phone": "+351 919 820 873",
+            "distance": 1031.302895374218,
+            "id": "rGfFhPeKv1UVJrW1ZpSKBg",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/M9QSQPB4d3Ojy926oDfbuA/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "Sitio do Cais dos Botiroes, 31",
+                "address2": "",
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Sitio do Cais dos Botiroes, 31",
+                    "3800-350 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-350"
+            },
+            "name": "Cais Madeirense",
+            "phone": "+351919820873",
+            "price": "\u20ac\u20ac",
+            "rating": 4.0,
+            "review_count": 6,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/cais-madeirense-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "cervejaria-alicarius-aveiro",
+            "categories": [
+                {
+                    "alias": "pubs",
+                    "title": "Pubs"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6445158126326,
+                "longitude": -8.65506561053838
+            },
+            "display_phone": "+351 234 386 490",
+            "distance": 1046.3638822358037,
+            "id": "-tHWpnHZ2B3Fm7rFCF_K5g",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/DeUMVCPRlVQ21z5ssryuYQ/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. Dom Jorge de Lencastre, 80",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. Dom Jorge de Lencastre, 80",
+                    "3800-141 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-141"
+            },
+            "name": "Cervejaria Alicarius",
+            "phone": "+351234386490",
+            "price": "\u20ac\u20ac",
+            "rating": 4.5,
+            "review_count": 3,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/cervejaria-alicarius-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "fus\u00f5es-aveiro",
+            "categories": [
+                {
+                    "alias": "wine_bars",
+                    "title": "Wine Bars"
+                },
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.642462,
+                "longitude": -8.656998
+            },
+            "display_phone": "+351 961 110 904",
+            "distance": 1094.0186635903572,
+            "id": "XZwhHVx-nxuRxuEC7PV4jw",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/43vvl6dpyYnOG0rWgQeiUg/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. Joao Afonso, 13",
+                "address2": "",
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. Joao Afonso, 13",
+                    "3800-198 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-198"
+            },
+            "name": "Fus\u00f5es",
+            "phone": "+351961110904",
+            "price": "\u20ac\u20ac",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/fus%C3%B5es-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "batista-do-bacalhau-aveiro",
+            "categories": [
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                },
+                {
+                    "alias": "mediterranean",
+                    "title": "Mediterranean"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.627879,
+                "longitude": -8.626699
+            },
+            "display_phone": "+351 234 341 949",
+            "distance": 1983.5839864956524,
+            "id": "IqSqmv7E8VNTYQGqHkQY3g",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Q7qW6npwGPxNds5sEN9UQQ/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. Padre Am\u00e9rico, 31",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. Padre Am\u00e9rico, 31",
+                    "3810-024 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3810-024"
+            },
+            "name": "Batista do Bacalhau",
+            "phone": "+351234341949",
+            "rating": 5.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/batista-do-bacalhau-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "churrasqueira-gavi\u00e3o-aveiro-2",
+            "categories": [
+                {
+                    "alias": "restaurants",
+                    "title": "Restaurants"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6261,
+                "longitude": -8.62706
+            },
+            "display_phone": "+351 234 313 552",
+            "distance": 2094.5325522972003,
+            "id": "XgIy1eJAIy66T8HZ-yhGGQ",
+            "image_url": "",
+            "is_closed": false,
+            "location": {
+                "address1": null,
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "3810-189 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3810-189"
+            },
+            "name": "Churrasqueira Gavi\u00c3o",
+            "phone": "+351234313552",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/churrasqueira-gavi%C3%A3o-aveiro-2?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "espigueiro-do-soajo-no-title",
+            "categories": [
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                },
+                {
+                    "alias": "mediterranean",
+                    "title": "Mediterranean"
+                }
+            ],
+            "coordinates": {
+                "latitude": 41.86881,
+                "longitude": -8.27088
+            },
+            "display_phone": "+351 258 576 136",
+            "distance": 2608.805514215652,
+            "id": "qGPvBhqx0ZYc_FxTi3kJJw",
+            "image_url": "",
+            "is_closed": false,
+            "location": {
+                "address1": "Av. 25 de Abril, 1425",
+                "address2": "",
+                "address3": null,
+                "city": "Viana do Castelo",
+                "country": "PT",
+                "display_address": [
+                    "Av. 25 de Abril, 1425",
+                    "3810-164 Viana do Castelo",
+                    "Portugal"
+                ],
+                "state": "16",
+                "zip_code": "3810-164"
+            },
+            "name": "Espigueiro do Soajo",
+            "phone": "+351258576136",
+            "rating": 5.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/espigueiro-do-soajo-no-title?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "bistro-algar-seco-aveiro",
+            "categories": [
+                {
+                    "alias": "bistros",
+                    "title": "Bistros"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6286010742188,
+                "longitude": -8.65878009796143
+            },
+            "display_phone": "+351 282 350 449",
+            "distance": 3116.6031337929176,
+            "id": "6I8ScpJKPKF9CGHs0s-vWA",
+            "image_url": "",
+            "is_closed": false,
+            "location": {
+                "address1": "Rua d, Flores",
+                "address2": "",
+                "address3": "",
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Rua d, Flores",
+                    "8401-909 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "8401-909"
+            },
+            "name": "Bistro Algar Seco",
+            "phone": "+351282350449",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/bistro-algar-seco-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "alavarium-arrota-nova",
+            "categories": [
+                {
+                    "alias": "cocktailbars",
+                    "title": "Cocktail Bars"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6428743,
+                "longitude": -8.6562673
+            },
+            "display_phone": "+351 234 042 124",
+            "distance": 3529.518462013214,
+            "id": "nbiwgGPWpOW4Ydz3_EK6KA",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/yAixZZ4R_YH5lF-ahNnV7A/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. do Lavadouro, 2",
+                "address2": "",
+                "address3": "",
+                "city": "Arrota Nova",
+                "country": "PT",
+                "display_address": [
+                    "R. do Lavadouro, 2",
+                    "3800-208 Arrota Nova",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-208"
+            },
+            "name": "Alavarium",
+            "phone": "+351234042124",
+            "price": "\u20ac\u20ac",
+            "rating": 5.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/alavarium-arrota-nova?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "restaurante-bar-o-gafanhoto-\u00edlhavo",
+            "categories": [
+                {
+                    "alias": "restaurants",
+                    "title": "Restaurants"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6047096,
+                "longitude": -8.7290096
+            },
+            "display_phone": "+351 234 367 673",
+            "distance": 3726.6494907570973,
+            "id": "Hiu-2NvtaF_RF-Czsnliyw",
+            "image_url": "",
+            "is_closed": false,
+            "location": {
+                "address1": "R. da Escola, 21",
+                "address2": null,
+                "address3": null,
+                "city": "\u00cdlhavo",
+                "country": "PT",
+                "display_address": [
+                    "R. da Escola, 21",
+                    "3830-470 \u00cdlhavo",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3830-470"
+            },
+            "name": "Restaurante Bar o Gafanhoto",
+            "phone": "+351234367673",
+            "rating": 5.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/restaurante-bar-o-gafanhoto-%C3%ADlhavo?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "restaurante-ab\u00edlio-marques-aveiro",
+            "categories": [
+                {
+                    "alias": "seafood",
+                    "title": "Seafood"
+                },
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6027024585333,
+                "longitude": -8.64160740023742
+            },
+            "display_phone": "+351 234 423 457",
+            "distance": 4083.926181443197,
+            "id": "KqtZaJr4AT-HrPg-Or6g0w",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/W9I7Rb8f__UgvrGlLYYfkQ/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. da Capela, 182",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. da Capela, 182",
+                    "3810-383 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3810-383"
+            },
+            "name": "Restaurante Ab\u00edlio Marques",
+            "phone": "+351234423457",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/restaurante-ab%C3%ADlio-marques-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "restaurante-ab\u00edlio-marques-aveiro-2",
+            "categories": [
+                {
+                    "alias": "modern_european",
+                    "title": "Modern European"
+                },
+                {
+                    "alias": "bbq",
+                    "title": "Barbeque"
+                },
+                {
+                    "alias": "portuguese",
+                    "title": "Portuguese"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.602576,
+                "longitude": -8.641814
+            },
+            "display_phone": "+351 234 423 457",
+            "distance": 4096.8871701829,
+            "id": "srvQeaPFkjTCKoUNnmDFbA",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Mbl2U-qrbRjRJBY03V0Niw/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": "R. da Capela, 182",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "R. da Capela, 182",
+                    "3810-383 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3810-383"
+            },
+            "name": "Restaurante Ab\u00edlio Marques",
+            "phone": "+351234423457",
+            "price": "\u20ac\u20ac",
+            "rating": 4.0,
+            "review_count": 4,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/restaurante-ab%C3%ADlio-marques-aveiro-2?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "mcdonalds-aveiro-2",
+            "categories": [
+                {
+                    "alias": "burgers",
+                    "title": "Burgers"
+                },
+                {
+                    "alias": "hotdogs",
+                    "title": "Fast Food"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6681,
+                "longitude": -8.60507
+            },
+            "display_phone": "+351 234 300 480",
+            "distance": 4624.9448100251275,
+            "id": "V2vdLA6kI5T5Ryfy8pmUFQ",
+            "image_url": "",
+            "is_closed": false,
+            "location": {
+                "address1": "Estrada National, 109",
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "Estrada National, 109",
+                    "3800-042 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-042"
+            },
+            "name": "McdonaldS",
+            "phone": "+351234300480",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/mcdonalds-aveiro-2?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "restaurante-solar-das-est\u00e1tuas-aveiro-2",
+            "categories": [
+                {
+                    "alias": "restaurants",
+                    "title": "Restaurants"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6681,
+                "longitude": -8.60507
+            },
+            "display_phone": "+351 234 312 240",
+            "distance": 4624.9448100251275,
+            "id": "zrln7psujE8r8gD-lqIBVw",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/yr4zJ2CxF02SeBi_trYRmg/o.jpg",
+            "is_closed": false,
+            "location": {
+                "address1": null,
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "3800-042 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-042"
+            },
+            "name": "Restaurante Solar das Est\u00e1tuas",
+            "phone": "+351234312240",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/restaurante-solar-das-est%C3%A1tuas-aveiro-2?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        },
+        {
+            "alias": "snack-bar-o-p\u00facaro-aveiro",
+            "categories": [
+                {
+                    "alias": "restaurants",
+                    "title": "Restaurants"
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.6681,
+                "longitude": -8.60507
+            },
+            "display_phone": "+351 234 311 185",
+            "distance": 4624.9448100251275,
+            "id": "bu1HF6_7uMO_S4lUrQ0Wig",
+            "image_url": "",
+            "is_closed": false,
+            "location": {
+                "address1": null,
+                "address2": null,
+                "address3": null,
+                "city": "Aveiro",
+                "country": "PT",
+                "display_address": [
+                    "3800-000 Aveiro",
+                    "Portugal"
+                ],
+                "state": "01",
+                "zip_code": "3800-000"
+            },
+            "name": "Snack Bar O P\u00facaro",
+            "phone": "+351234311185",
+            "rating": 4.0,
+            "review_count": 1,
+            "transactions": [],
+            "url": "https://www.yelp.com/biz/snack-bar-o-p%C3%BAcaro-aveiro?adjust_creative=UEpOw_GR3E0vb7-CxYCPlA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=UEpOw_GR3E0vb7-CxYCPlA"
+        }
+    ]
+}
